@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+business:
+  name: Diploma of Business
+
+accounting:
+  name: Diploma of Accounting
+
+hospitality:
+  name: Diploma of Hospitality
+
+it:
+  name: Diploma of IT
+
+childcare:
+  name: Child Care
+
+ge:
+  name: General English
+
+ielts:
+  name: IELTS
+
+bba:
+  name: Bachelor of Business Administration 
+
+ba:
+  name: Bachelor of Accounting
+
+mba:
+  name: Master Business Administration 
+
+event:
+  name: Diploma in Events 
+
+design:
+  name: Diploma in Graphic Design

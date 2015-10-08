@@ -1,0 +1,8 @@
+<tr>
+	<td><%= link_to "View", institution %>
+		<% #if user_signed_in? %>
+		 	| <%= link_to "Edit", edit_institution_path(institution) %>
+		<% #end %>
+	</td>
+	<td><%= institution %></td>
+</tr>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+<% institutions = ["aipe","kaplan","navitas","ilsc", "selc"] %>
+<% courses = ["business","accounting","it","hospitality", "it", "childcare", "ge", "ielts", "bba", "ba", "mba", "event", "design"] %>
+
+<% count = 1 %>
+<% 4.times do |x| %>
+<% institutions.size.times do |m| %>
+<% courses.size.times do |n| %>
+intake_date<%= count %>:
+  course_option: <%= courses[n-1] %>_<%= institutions[m-1] %>
+  intake_date: <%= Time.now + ((x+4)*7*24*60*60) %>
+  capacity: 25
+  <% count += 1 %>
+<% end %>
+<% end %>
+<% end %>

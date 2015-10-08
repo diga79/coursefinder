@@ -1,0 +1,20 @@
+<% if @institution.errors.any? %>
+	<div id="errors">
+			<p>Please correct the following <%= pluralize(@institution.errors.count, "error") %></p>
+			<ul>
+				<% @institution.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+	</div>
+<% end %>
+
+<%= form_for(@institution) do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.submit @institution.new_record? ? "Create Institution" : "Update Institution" %>
+	</div>
+<% end %>

@@ -1,0 +1,20 @@
+<% if @course.errors.any? %>
+	<div id="errors">
+			<p>Please correct the following <%= pluralize(@course.errors.count, "error") %></p>
+			<ul>
+				<% @course.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+	</div>
+<% end %>
+
+<%= form_for(@course) do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.submit @course.new_record? ? "Create Course" : "Update Course" %>
+	</div>
+<% end %>

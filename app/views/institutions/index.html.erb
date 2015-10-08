@@ -1,0 +1,15 @@
+<h1>Institutions</h1>
+<p>Here are all the Institutions</p>
+<% if @institutions.size > 0 %>
+<table>
+	<tbody>
+		<tr>
+			<th>Action</th>
+			<th>Institution</th>
+		</tr>
+		<%= render partial: "institution", collection: @institutions %>
+	</tbody>
+</table>
+<% else %>
+	<p>No Institutions created</p>
+<% end %>

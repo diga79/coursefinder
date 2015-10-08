@@ -1,0 +1,2 @@
+module CourseIntakesHelper
+end

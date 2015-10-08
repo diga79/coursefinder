@@ -1,0 +1,19 @@
+<h1><%= @institution.name %></h1>
+
+<p><%= link_to "Edit Institution", edit_institution_path(@institution) %></p>
+
+<h2>Courses</h2>
+<% if @institution.courses.size > 0  %>
+<table>
+	<tbody>
+		<tr>
+			<th>Action</th>
+			<th>Courses</th>
+			<th>Cost</th>
+		</tr>
+		
+	</tbody>
+</table>
+<% else %>
+	<p>No Courses created yet</p>
+<% end %>

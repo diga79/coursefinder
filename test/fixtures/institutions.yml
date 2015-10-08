@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+aipe:
+  name: AIPE 
+  website: www.aipe.nsw.edu.au 
+  enrolment_fee: 200
+
+kaplan:
+  name: kaplan 
+  website: www.kaplan.nsw.edu.au 
+  enrolment_fee: 200
+
+navitas:
+  name: Navitas 
+  website: www.navitas.com.au
+  enrolment_fee: 200
+
+ilsc:
+  name: ILSC 
+  website: www.ilsc.com.au 
+  enrolment_fee: 200
+
+selc:
+  name: SELC 
+  website: www.selc.com.au 
+  enrolment_fee: 200
