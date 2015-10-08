@@ -17,8 +17,8 @@ module ApplicationHelper
 				linkurl: applications_path
 			},
 			{
-				displaytext: 'Students',
-				controllername: 'students',
+				displaytext: 'Reports',
+				controllername: 'reports',
 				linkurl: students_path
 			}
 		]

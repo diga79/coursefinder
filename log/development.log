@@ -4973,3 +4973,602 @@ AbstractController::ActionNotFound (The action 'edit' could not be found for Cou
   Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-09 09:42:01 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InstitutionsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "institutions"
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT "institutions".* FROM "institutions"[0m
+  Rendered institutions/_institution.html.erb (1.7ms)
+  Rendered institutions/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 285ms (Views: 264.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:42:03 +1100
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_course.html.erb (2.8ms)
+  Rendered courses/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:42:06 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (1.3ms)
+  Rendered institutions/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 115ms (Views: 113.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/institutions/186764780/edit" for 127.0.0.1 at 2015-10-09 09:42:09 +1100
+Processing by InstitutionsController#edit as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.3ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  Rendered institutions/_form.html.erb (38.2ms)
+  Rendered institutions/edit.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 157ms (Views: 129.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:42:14 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "courses" INNER JOIN "course_options" ON "courses"."id" = "course_options"."course_id" WHERE "course_options"."institution_id" = ?[0m  [["institution_id", 186764780]]
+  Rendered institutions/show.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 139ms (Views: 137.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:42:25 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "courses" INNER JOIN "course_options" ON "courses"."id" = "course_options"."course_id" WHERE "course_options"."institution_id" = ?[0m  [["institution_id", 186764780]]
+  Rendered institutions/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-10-09 09:42:36 +1100
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2015-10-09 09:42:38 +1100
+Processing by ApplicationsController#index as HTML
+  Rendered applications/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:42:39 +1100
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_course.html.erb (1.8ms)
+  Rendered courses/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:44:05 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (0.9ms)
+  Rendered institutions/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:46:59 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (1.3ms)
+  Rendered institutions/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined local variable or method `reports_path' for #<#<Class:0x007f9df7e7d1b8>:0x007f9df7e7c6a0>):
+    13: 		<%= link_to content_tag('canvas', 'Timetracker', id: 'logocanvas'), root_url %>
+    14: 	<nav>
+    15: 		<ul>
+    16: 		<% nav_items.each do |item| %>
+    17: 			<%= display_nav_items(item[:displaytext], item[:controllername], item[:linkurl]) %>
+    18: 		<% end %>
+    19: 		</ul>
+  app/helpers/application_helper.rb:22:in `nav_items'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__918106439004532259_70158170500620'
+
+
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.1ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (150.4ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:49:44 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (1.2ms)
+  Rendered institutions/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined local variable or method `reports_path' for #<#<Class:0x007f9df7f96ec8>:0x007f9df7f95c08>):
+    13: 		<%= link_to content_tag('canvas', 'Timetracker', id: 'logocanvas'), root_url %>
+    14: 	<nav>
+    15: 		<ul>
+    16: 		<% nav_items.each do |item| %>
+    17: 			<%= display_nav_items(item[:displaytext], item[:controllername], item[:linkurl]) %>
+    18: 		<% end %>
+    19: 		</ul>
+  app/helpers/application_helper.rb:22:in `nav_items'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__918106439004532259_70158170500620'
+
+
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.3ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (104.8ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (1.2ms)
+  Rendered institutions/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 105ms (Views: 100.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/applications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/course_intakes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/course_options.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/general/alerts.self-8699d3e546dae472ea99e52e6b9f80fdb0259b2887f18a055fe82ba97ba4da80.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/general/forms.self-db514e962e2995dd26071e347e93c884315418f1881b8b3f8adfc93dba95015f.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/general/general.self-8e1f72d8835b74b9791e8d4d0d98cc98a3672a3a5143e410f4973c50a3613e11.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/institutions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/reset.self-c70a024053c2423c9171b0a8d42883cd82beb1d430253cee3392328398b5ca8a.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/applications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/course_intakes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/course_options.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/general/canvaslogo.self-7047beb7a548343841d0cd203353cec93436604db997a178990180a8f27fef47.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/institutions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-09 09:50:09 +1100
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:50:14 +1100
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/_course.html.erb (2.6ms)
+  Rendered courses/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:50:16 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "institutions"
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT "institutions".* FROM "institutions"[0m
+  Rendered institutions/_institution.html.erb (0.9ms)
+  Rendered institutions/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:50:20 +1100
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_course.html.erb (1.7ms)
+  Rendered courses/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:50:22 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (1.0ms)
+  Rendered institutions/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:50:24 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses" INNER JOIN "course_options" ON "courses"."id" = "course_options"."course_id" WHERE "course_options"."institution_id" = ?  [["institution_id", 186764780]]
+  Rendered institutions/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "course_options" WHERE "course_options"."institution_id" = ?  [["institution_id", 186764780]]
+  [1m[36mCourseOption Load (0.2ms)[0m  [1mSELECT "course_options".* FROM "course_options" WHERE "course_options"."institution_id" = ?[0m  [["institution_id", 186764780]]
+  Rendered institutions/show.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 138ms (Views: 136.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/applications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/course_intakes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/course_options.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/general/alerts.self-8699d3e546dae472ea99e52e6b9f80fdb0259b2887f18a055fe82ba97ba4da80.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/general/forms.self-db514e962e2995dd26071e347e93c884315418f1881b8b3f8adfc93dba95015f.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/general/general.self-8e1f72d8835b74b9791e8d4d0d98cc98a3672a3a5143e410f4973c50a3613e11.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/institutions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/reset.self-c70a024053c2423c9171b0a8d42883cd82beb1d430253cee3392328398b5ca8a.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/applications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/course_intakes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/course_options.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/general/canvaslogo.self-7047beb7a548343841d0cd203353cec93436604db997a178990180a8f27fef47.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/institutions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:03 +1100
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:53:35 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "course_options" WHERE "course_options"."institution_id" = ?[0m  [["institution_id", 186764780]]
+  [1m[35mCourseOption Load (0.1ms)[0m  SELECT "course_options".* FROM "course_options" WHERE "course_options"."institution_id" = ?  [["institution_id", 186764780]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  Rendered institutions/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 108ms (Views: 105.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/applications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:35 +1100
+
+
+Started GET "/assets/course_intakes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:35 +1100
+
+
+Started GET "/assets/course_options.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:35 +1100
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:35 +1100
+
+
+Started GET "/assets/general/alerts.self-8699d3e546dae472ea99e52e6b9f80fdb0259b2887f18a055fe82ba97ba4da80.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/general/forms.self-db514e962e2995dd26071e347e93c884315418f1881b8b3f8adfc93dba95015f.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/general/general.self-8e1f72d8835b74b9791e8d4d0d98cc98a3672a3a5143e410f4973c50a3613e11.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/institutions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/reset.self-c70a024053c2423c9171b0a8d42883cd82beb1d430253cee3392328398b5ca8a.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/applications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/course_intakes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/course_options.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/general/canvaslogo.self-7047beb7a548343841d0cd203353cec93436604db997a178990180a8f27fef47.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/institutions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-09 09:53:36 +1100
+
+
+Started GET "/institutions/186764780/edit" for 127.0.0.1 at 2015-10-09 09:53:41 +1100
+Processing by InstitutionsController#edit as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  Rendered institutions/_form.html.erb (1.1ms)
+  Rendered institutions/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 96ms (Views: 94.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:53:44 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "institutions"
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT "institutions".* FROM "institutions"[0m
+  Rendered institutions/_institution.html.erb (1.1ms)
+  Rendered institutions/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 105ms (Views: 104.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:53:46 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "course_options" WHERE "course_options"."institution_id" = ?[0m  [["institution_id", 186764780]]
+  [1m[35mCourseOption Load (0.1ms)[0m  SELECT "course_options".* FROM "course_options" WHERE "course_options"."institution_id" = ?  [["institution_id", 186764780]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  Rendered institutions/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 145ms (Views: 141.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:53:50 +1100
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/_course.html.erb (1.9ms)
+  Rendered courses/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/courses/148074040" for 127.0.0.1 at 2015-10-09 09:53:53 +1100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"148074040"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCourseOption Load (0.2ms)[0m  [1mSELECT  "course_options".* FROM "course_options" WHERE "course_options"."course_id" = ? LIMIT 1[0m  [["course_id", 148074040]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "course_options" WHERE "course_options"."course_id" = ?  [["course_id", 148074040]]
+  [1m[36mCourseOption Load (0.2ms)[0m  [1mSELECT "course_options".* FROM "course_options" WHERE "course_options"."course_id" = ?[0m  [["course_id", 148074040]]
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  Rendered courses/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:55:18 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (1.0ms)
+  Rendered institutions/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 09:55:20 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "course_options" WHERE "course_options"."institution_id" = ?  [["institution_id", 186764780]]
+  [1m[36mCourseOption Load (0.1ms)[0m  [1mSELECT "course_options".* FROM "course_options" WHERE "course_options"."institution_id" = ?[0m  [["institution_id", 186764780]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  Rendered institutions/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:55:34 +1100
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_course.html.erb (1.8ms)
+  Rendered courses/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/148074040" for 127.0.0.1 at 2015-10-09 09:55:36 +1100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"148074040"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCourseOption Load (0.1ms)[0m  SELECT  "course_options".* FROM "course_options" WHERE "course_options"."course_id" = ? LIMIT 1  [["course_id", 148074040]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "course_options" WHERE "course_options"."course_id" = ?[0m  [["course_id", 148074040]]
+  [1m[35mCourseOption Load (0.1ms)[0m  SELECT "course_options".* FROM "course_options" WHERE "course_options"."course_id" = ?  [["course_id", 148074040]]
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  Rendered courses/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 09:55:41 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "institutions"
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT "institutions".* FROM "institutions"[0m
+  Rendered institutions/_institution.html.erb (0.9ms)
+  Rendered institutions/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-10-09 09:55:43 +1100
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_course.html.erb (1.8ms)
+  Rendered courses/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 97ms (Views: 96.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2015-10-09 09:55:44 +1100
+Processing by ApplicationsController#index as HTML
+  Rendered applications/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-10-09 09:55:48 +1100
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 89ms (Views: 88.6ms | ActiveRecord: 0.0ms)

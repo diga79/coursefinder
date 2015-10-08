@@ -3,17 +3,30 @@
 <p><%= link_to "Edit Institution", edit_institution_path(@institution) %></p>
 
 <h2>Courses</h2>
-<% if @institution.courses.size > 0  %>
+<p>Courses offered by this Institution</p>
+<% if @institution.course_options.size > 0 %>
 <table>
 	<tbody>
-		<tr>
+		<tr id="headerrow">
 			<th>Action</th>
-			<th>Courses</th>
+			<th>Course</th>
 			<th>Cost</th>
+			<th>Duration</th>
 		</tr>
-		
+		<% @institution.course_options.each do |course_option| %>
+			<tr>
+				<td class="action"><%= link_to "View", course_option %>
+				<% #if user_signed_in? %>
+				 | <%= link_to "Edit", edit_course_option_path(course_option) %>
+				 <% #end %>
+				</td>
+				<td><%= course_option.course %></td>
+				<td><%= course_option.cost %></td>
+				<td><%= course_option.duration %> days</td>
+			</tr>
+		<% end %>
 	</tbody>
 </table>
 <% else %>
-	<p>No Courses created yet</p>
+	<p>No Record registered yet</p>
 <% end %>
