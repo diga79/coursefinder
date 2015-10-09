@@ -29898,3 +29898,1363 @@ Processing by ApplicationsController#index as HTML
   Rendered applications/_sidebar.html.erb (0.6ms)
   Rendered applications/index.html.erb within layouts/application (62.4ms)
 Completed 200 OK in 442ms (Views: 435.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 22:36:52 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.4ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (5.3ms)
+  Rendered institutions/_sidebar.html.erb (0.5ms)
+  Rendered institutions/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 315ms (Views: 298.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 22:36:56 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.6ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  Rendered institutions/_sidebar.html.erb (0.5ms)
+  Rendered institutions/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 259ms (Views: 253.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/institutions/186764780/edit" for 127.0.0.1 at 2015-10-09 22:36:58 +1100
+Processing by InstitutionsController#edit as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.3ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  Rendered institutions/_form.html.erb (44.6ms)
+  Rendered institutions/edit.html.erb within layouts/application (50.3ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (can not load translations from /Users/rodrigofaria/Apps/coursefinder/config/locales/devise.en.yml: #<Errno::ENOENT: No such file or directory @ rb_sysopen - /Users/rodrigofaria/Apps/coursefinder/config/locales/devise.en.yml>):
+    11: 
+    12: <%= form_for(@institution) do |f| %>
+    13: 	<div>
+    14: 		<%= f.label :name %>
+    15: 		<%= f.text_field :name %>
+    16: 	</div>
+    17: 	<div>
+  app/views/institutions/_form.html.erb:14:in `block in _app_views_institutions__form_html_erb___1438333711096060678_70293395317460'
+  app/views/institutions/_form.html.erb:12:in `_app_views_institutions__form_html_erb___1438333711096060678_70293395317460'
+  app/views/institutions/edit.html.erb:2:in `_app_views_institutions_edit_html_erb__2424893790849955896_70293396001960'
+
+
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (34.2ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.6ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (268.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (162.2ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (360.9ms)
+
+
+Started GET "/institutions/186764780/edit" for 127.0.0.1 at 2015-10-09 22:37:00 +1100
+Processing by InstitutionsController#edit as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.5ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  Rendered institutions/_form.html.erb (28.6ms)
+  Rendered institutions/edit.html.erb within layouts/application (32.3ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (can not load translations from /Users/rodrigofaria/Apps/coursefinder/config/locales/devise.en.yml: #<Errno::ENOENT: No such file or directory @ rb_sysopen - /Users/rodrigofaria/Apps/coursefinder/config/locales/devise.en.yml>):
+    11: 
+    12: <%= form_for(@institution) do |f| %>
+    13: 	<div>
+    14: 		<%= f.label :name %>
+    15: 		<%= f.text_field :name %>
+    16: 	</div>
+    17: 	<div>
+  app/views/institutions/_form.html.erb:14:in `block in _app_views_institutions__form_html_erb___1438333711096060678_70293394710120'
+  app/views/institutions/_form.html.erb:12:in `_app_views_institutions__form_html_erb___1438333711096060678_70293394710120'
+  app/views/institutions/edit.html.erb:2:in `_app_views_institutions_edit_html_erb__2424893790849955896_70293384422880'
+
+
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (33.6ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (243.5ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (169.0ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/rodrigofaria/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (368.3ms)
+
+
+Started GET "/institutions/186764780/edit" for 127.0.0.1 at 2015-10-09 22:39:49 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InstitutionsController#edit as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.5ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  Rendered institutions/_form.html.erb (69.3ms)
+  Rendered institutions/_sidebar.html.erb (1.4ms)
+  Rendered institutions/edit.html.erb within layouts/application (91.6ms)
+Completed 200 OK in 1010ms (Views: 908.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/applications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/course_options.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/course_intakes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/general/alerts.self-8699d3e546dae472ea99e52e6b9f80fdb0259b2887f18a055fe82ba97ba4da80.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/general/forms.self-db514e962e2995dd26071e347e93c884315418f1881b8b3f8adfc93dba95015f.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/institutions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/general/general.self-8e1f72d8835b74b9791e8d4d0d98cc98a3672a3a5143e410f4973c50a3613e11.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/reset.self-c70a024053c2423c9171b0a8d42883cd82beb1d430253cee3392328398b5ca8a.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-09 22:39:51 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.4ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (6.1ms)
+  Rendered institutions/_sidebar.html.erb (0.4ms)
+  Rendered institutions/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 284ms (Views: 282.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/general/general.self-8e1f72d8835b74b9791e8d4d0d98cc98a3672a3a5143e410f4973c50a3613e11.css?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/reset.self-c70a024053c2423c9171b0a8d42883cd82beb1d430253cee3392328398b5ca8a.css?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/course_options.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/applications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/course_intakes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/general/canvaslogo.self-7047beb7a548343841d0cd203353cec93436604db997a178990180a8f27fef47.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/institutions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-09 22:40:00 +1100
+
+
+Started GET "/institutions" for 127.0.0.1 at 2015-10-09 22:40:03 +1100
+Processing by InstitutionsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "institutions"[0m
+  [1m[35mInstitution Load (0.4ms)[0m  SELECT "institutions".* FROM "institutions"
+  Rendered institutions/_institution.html.erb (5.0ms)
+  Rendered institutions/_sidebar.html.erb (1.4ms)
+  Rendered institutions/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 253ms (Views: 250.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/institutions/186764780" for 127.0.0.1 at 2015-10-09 22:40:06 +1100
+Processing by InstitutionsController#show as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[36mInstitution Load (0.3ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  Rendered institutions/_sidebar.html.erb (0.5ms)
+  Rendered institutions/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 278ms (Views: 275.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/institutions/186764780/edit" for 127.0.0.1 at 2015-10-09 22:40:08 +1100
+Processing by InstitutionsController#edit as HTML
+  Parameters: {"id"=>"186764780"}
+  [1m[35mInstitution Load (0.3ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  Rendered institutions/_form.html.erb (7.5ms)
+  Rendered institutions/_sidebar.html.erb (0.5ms)
+  Rendered institutions/edit.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 254ms (Views: 251.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/course_options" for 127.0.0.1 at 2015-10-09 22:40:12 +1100
+Processing by CourseOptionsController#index as HTML
+  [1m[36mCourseOption Load (4.6ms)[0m  [1mSELECT "course_options".* FROM "course_options"  ORDER BY intake_date[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mInstitution Load (0.3ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mInstitution Load (0.3ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mInstitution Load (0.3ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCourse Load (0.4ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 219443717]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1001261735]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 493505314]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 749160980]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 984687248]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 333652788]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 381516361]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 579761974]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 926897143]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 305191309]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 223304243]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 426548922]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 196969640]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 767885798]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 186764780]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 148074040]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1[0m  [["id", 906907401]]
+  Rendered course_options/_course_options.html.erb (1017.2ms)
+  Rendered course_options/_sidebar.html.erb (1.7ms)
+  Rendered course_options/index.html.erb within layouts/application (1073.2ms)
+Completed 200 OK in 1326ms (Views: 1274.4ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/course_options/1067781091" for 127.0.0.1 at 2015-10-09 22:40:16 +1100
+Processing by CourseOptionsController#show as HTML
+  Parameters: {"id"=>"1067781091"}
+  [1m[35mCourseOption Load (0.5ms)[0m  SELECT  "course_options".* FROM "course_options" WHERE "course_options"."id" = ? LIMIT 1  [["id", 1067781091]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  Rendered course_options/_sidebar.html.erb (0.5ms)
+  Rendered course_options/show.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 263ms (Views: 258.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/course_options/1067781091/edit" for 127.0.0.1 at 2015-10-09 22:40:18 +1100
+Processing by CourseOptionsController#edit as HTML
+  Parameters: {"id"=>"1067781091"}
+  [1m[36mCourseOption Load (0.3ms)[0m  [1mSELECT  "course_options".* FROM "course_options" WHERE "course_options"."id" = ? LIMIT 1[0m  [["id", 1067781091]]
+  [1m[35mInstitution Load (0.5ms)[0m  SELECT "institutions".* FROM "institutions"
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered course_options/_form.html.erb (84.0ms)
+  Rendered course_options/_sidebar.html.erb (1.0ms)
+  Rendered course_options/edit.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 344ms (Views: 339.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/course_options" for 127.0.0.1 at 2015-10-09 22:40:30 +1100
+Processing by CourseOptionsController#index as HTML
+  [1m[35mCourseOption Load (6.8ms)[0m  SELECT "course_options".* FROM "course_options"  ORDER BY intake_date
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mInstitution Load (0.3ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mInstitution Load (0.3ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.9ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 219443717]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1001261735]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 749160980]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 984687248]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 333652788]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 579761974]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 305191309]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 223304243]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 426548922]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 186764780]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 148074040]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  Rendered course_options/_course_options.html.erb (1281.9ms)
+  Rendered course_options/_sidebar.html.erb (0.5ms)
+  Rendered course_options/index.html.erb within layouts/application (1313.7ms)
+Completed 200 OK in 1544ms (Views: 1506.4ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-10-09 22:40:33 +1100
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/_student.html.erb (5.7ms)
+  Rendered students/_sidebar.html.erb (1.5ms)
+  Rendered students/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 319ms (Views: 308.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-10-09 22:40:38 +1100
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (14.4ms)
+  Rendered students/_sidebar.html.erb (0.6ms)
+  Rendered students/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 313ms (Views: 311.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2015-10-09 22:40:42 +1100
+Processing by ApplicationsController#index as HTML
+  [1m[35mApplication Load (0.5ms)[0m  SELECT "applications".* FROM "applications"
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 830138774]]
+  [1m[35mCourseOption Load (0.3ms)[0m  SELECT  "course_options".* FROM "course_options" WHERE "course_options"."id" = ? LIMIT 1  [["id", 596284005]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 493505314]]
+  [1m[35mInstitution Load (0.3ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 585460615]]
+  [1m[35mCourseOption Load (0.7ms)[0m  SELECT  "course_options".* FROM "course_options" WHERE "course_options"."id" = ? LIMIT 1  [["id", 427235861]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 196969640]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 359048760]]
+  [1m[35mCourseOption Load (0.2ms)[0m  SELECT  "course_options".* FROM "course_options" WHERE "course_options"."id" = ? LIMIT 1  [["id", 805756894]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 381516361]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 926897143]]
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 808974800]]
+  [1m[35mCourseOption Load (0.2ms)[0m  SELECT  "course_options".* FROM "course_options" WHERE "course_options"."id" = ? LIMIT 1  [["id", 308652700]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 767885798]]
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT  "institutions".* FROM "institutions" WHERE "institutions"."id" = ? LIMIT 1  [["id", 906907401]]
+  Rendered applications/_application.html.erb (51.8ms)
+  Rendered applications/_sidebar.html.erb (1.5ms)
+  Rendered applications/index.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 396ms (Views: 380.0ms | ActiveRecord: 5.2ms)
