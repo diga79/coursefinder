@@ -28,17 +28,17 @@ module ApplicationHelper
 	end
 
 	 
-	def user_logged_in_msg
-		str = ''
-		str += '<div class="userloggedin">'
+#	def user_logged_in_msg
+		#str = ''
+		#str += '<div class="userloggedin">'
 #		if user_signed_in?
-			str += "<p id=""user_info"">current_user<br>#{link_to('Logout', institutions_path, :method => :delete)}</p>"
+#			str += "<p id=""user_info"">current_user<br>#{link_to('Logout', institutions_path, :method => :delete)}</p>"
 #		else
-			str += "<p id=""user_info"">#{link_to('Login', institutions_path)} | #{link_to('Register', institutions_path)}</p>"
+#			str += "<p id=""user_info"">#{link_to('Login', institutions_path)} | #{link_to('Register', institutions_path)}</p>"
 #		end
-		str += '</div>'
-		raw(str)
-	end	
+#		str += '</div>'
+#		raw(str)
+#	end	
 
 	def sidebar
 		unless ['sessions', 'registrations'].include?(controller_name)
