@@ -1,2 +1,18 @@
 <h1>Students</h1>
 
+<p>Here are all the Students</p>
+<table>
+	<tbody>
+		<tr>
+			<th>Action</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+		</tr>
+		<%= render partial: "student", collection: @students %> 
+	</tbody>
+</table>
+
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>

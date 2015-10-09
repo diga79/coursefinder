@@ -1,0 +1,10 @@
+			<tr>
+				<td class="action"><%= link_to "View", course_options %>
+				<% #if user_signed_in? %>
+				 | <%= link_to "Edit", edit_course_option_path(course_options) %>
+				 <% #end %>
+				</td>
+				<td><%= course_options.course %></td>
+				<td><%= course_options.institution %></td>
+				<td><%= course_options.intake_date_field %></td>
+			</tr>

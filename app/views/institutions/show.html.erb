@@ -1,32 +1,9 @@
 <h1><%= @institution.name %></h1>
 
 <p><%= link_to "Edit Institution", edit_institution_path(@institution) %></p>
+<p><b>Website:</b> <%= @institution.website %> </p>
+<p><b>Enrolment Fee:</b> <%= @institution.enrolment_fee %></p>
 
-<h2>Courses</h2>
-<p>Courses offered by this Institution</p>
-<% if @institution.course_options.size > 0 %>
-<table>
-	<tbody>
-		<tr id="headerrow">
-			<th>Action</th>
-			<th>Course</th>
-			<th>Cost</th>
-			<th>Duration</th>
-		</tr>
-		<% @institution.course_options.each do |course_option| %>
-			<tr>
-				<td class="action"><%= link_to "View", course_option %>
-				<% #if user_signed_in? %>
-				 | <%= link_to "Edit", edit_course_option_path(course_option) %>
-				 <% #end %>
-				</td>
-				<td><%= course_option.course %></td>
-				<td><%= course_option.cost %></td>
-				<td><%= course_option.duration %> days</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
-<% else %>
-	<p>No Record registered yet</p>
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
 <% end %>

@@ -11,7 +11,6 @@ class CoursesController < ApplicationController
 
 	def show
 		@course = Course.find(params[:id])
-		@course_options = CourseOption.find_by course_id: @course
 	end
 
 	def new
@@ -19,7 +18,7 @@ class CoursesController < ApplicationController
 	end
 
 	def create
-		@course = Course.new(params[:Course].permit(:name))
+		@course = Course.new(params[:course].permit(:name, :description))
 		if @course.save
 			flash[:notice] = "Course Created"
 			redirect_to @course
@@ -34,7 +33,7 @@ class CoursesController < ApplicationController
 
 	def update
 		@course = Course.find(params[:id])
-		if @course.update(params[:Course].permit(:name))
+		if @course.update(params[:course].permit(:name, :description))
 			#Usermailer.Courseupdated_email(@course).deliver
 			flash[:notice] = "Course Updated"
 			redirect_to @course

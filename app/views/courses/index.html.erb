@@ -7,7 +7,12 @@
 		<tr>
 			<th>Action</th>
 			<th>Course</th>
+			<th>Description</th>
 		</tr>
 		<%= render partial: "course", collection: @courses %> 
 	</tbody>
 </table>
+
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>

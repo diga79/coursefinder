@@ -20,7 +20,7 @@ class InstitutionsController < ApplicationController
 	end
 
 	def create
-		@institution = Institution.new(params[:institution].permit(:name))
+		@institution = Institution.new(params[:institution].permit(:name, :website, :enrolment_fee))
 		if @institution.save
 			flash[:notice] = "Institution Created"
 			redirect_to @institution
@@ -35,7 +35,7 @@ class InstitutionsController < ApplicationController
 
 	def update
 		@institution = Institution.find(params[:id])
-		if @institution.update(params[:institution].permit(:name))
+		if @institution.update(params[:institution].permit(:name, :website, :enrolment_fee))
 			flash[:notice] = "Institution Updated"
 			redirect_to @institution
 		else

@@ -1,0 +1,11 @@
+			<tr>
+				<td class="action"><%= link_to "View", application %>
+				<% #if user_signed_in? %>
+				 | <%= link_to "Edit", edit_application_path(application) %>
+				 <% #end %>
+				</td>
+				<td><%= application.student %></td>
+				<td><%= application.course_option.course.name %></td>
+				<td><%= application.course_option.institution.name %></td>
+				<td><%= application.start_date_field %></td>
+			</tr>

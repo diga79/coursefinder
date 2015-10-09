@@ -6,36 +6,48 @@
 #
 business:
   name: Diploma of Business
+  description: Description about this course
 
 accounting:
   name: Diploma of Accounting
+  description: Description about this course
 
 hospitality:
   name: Diploma of Hospitality
+  description: Description about this course
 
 it:
   name: Diploma of IT
+  description: Description about this course
 
 childcare:
   name: Child Care
+  description: Description about this course
 
 ge:
   name: General English
+  description: Description about this course
 
 ielts:
   name: IELTS
+  description: Description about this course
 
 bba:
   name: Bachelor of Business Administration 
+  description: Description about this course
 
 ba:
   name: Bachelor of Accounting
+  description: Description about this course
 
 mba:
   name: Master Business Administration 
+  description: Description about this course
 
 event:
   name: Diploma in Events 
+  description: Description about this course
 
 design:
   name: Diploma in Graphic Design
+  description: Description about this course

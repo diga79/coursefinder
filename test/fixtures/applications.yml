@@ -7,28 +7,28 @@
 <% week = 7*24*60*60 %>
 application1:
   student: andrea
-  course_intake: intake_date34
+  course_option: course_option21
   start_date: <%= Time.now + 4 * week %>
   payment_due_date: <%= Time.now + 3 * week %>
-  payment_date:
+  payment_date: <%= Time.now + 3 * week %>
 
 application2:
   student: fernanda
-  course_intake: intake_date120
+  course_option: course_option120
   start_date: <%= Time.now + 4 * week %>
   payment_due_date: <%= Time.now + 3 * week %>
-  payment_date:
+  payment_date: <%= Time.now + 3 * week %>
 
 application3:
   student: john
-  course_intake: intake_date87
+  course_option: course_option87
   start_date: <%= Time.now + 4 * week %>
   payment_due_date: <%= Time.now + 3 * week %>
-  payment_date:
+  payment_date: <%= Time.now + 3 * week %>
 
 application4:
   student: adam
-  course_intake: intake_date34
+  course_option: course_option34
   start_date: <%= Time.now + 4 * week %>
   payment_due_date: <%= Time.now + 3 * week %>
-  payment_date:
+  payment_date: <%= Time.now + 3 * week %>

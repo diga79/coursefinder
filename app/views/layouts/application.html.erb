@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Timetracker</title>
+  <title>Coursefinder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -30,7 +30,8 @@
 		</article>			
 		
 		<aside>
-
+			<%= user_logged_in_msg %>
+			<%= yield :aside %>
 		</aside>		
 	</section>
 	<footer><p>Coursefinder is a Sample App</p></footer>
