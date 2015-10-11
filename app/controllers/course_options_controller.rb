@@ -1,4 +1,6 @@
 class CourseOptionsController < ApplicationController
+	before_filter :authenticate_user!
+
 	def index
 		@course_options = CourseOption.all.order('intake_date')
 	end

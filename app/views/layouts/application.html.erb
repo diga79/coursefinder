@@ -10,7 +10,7 @@
 <body>
 <div id="container">
 	<header>
-		<%= link_to content_tag('canvas', 'Timetracker', id: 'logocanvas'), root_url %>
+		<%= link_to content_tag('canvas', 'Coursefinder', id: 'logocanvas'), root_url %>
 	<nav>
 		<ul>
 		<% nav_items.each do |item| %>
@@ -26,11 +26,15 @@
 					<div class="flash <%= level %>"><%= flash[level] %></div>
 				<% end %>
 			<% end %>
-			<%= yield %>
+			<%= user_logged_in_msg %>
+ 			<%= yield %>
 		</article>			
-		
 		<aside>
-			<%= yield :aside %>
+			<% if content_for?(:aside) %>
+				<%= yield :aside %>
+			<% else %>
+				<%= sidebar %>
+			<% end %>
 		</aside>		
 	</section>
 	<footer><p>Coursefinder is a Sample App</p></footer>
