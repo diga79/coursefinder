@@ -10,10 +10,17 @@
 <% end %>
 
 <%= form_for(@application) do |f| %>
-	<div>
-		<%= f.label :student_id %>
-		<%= f.collection_select(:student_id, Student.all.order('first_name,last_name'), :id, :to_s, prompt: true) %>
-	</div>
+
+	<% if @student.new_record? %>
+		<div>
+			<%= f.label :student_id %>
+			<%= f.collection_select(:student_id, Student.all.order('first_name,last_name'), :id, :to_s, prompt: true) %>
+		</div>
+	<% else %>
+		<div>
+			Student: <%= @student %> 
+		</div>
+	<% end %>
 	<div>
 		<%= f.label :course_option_id %>
 		<%= f.collection_select(:course_option_id, CourseOption.all.order('intake_date'), :id, :course_name, prompt: true) %>

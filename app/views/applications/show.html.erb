@@ -6,4 +6,4 @@
 <p><b>Payment Date:</b> <%= @application.payment_date_field %></p>
 <p><b>Total Paid:</b> </p>
 
-<p><%= link_to "Edit Application", edit_application_path(@application) %></p>
+<p><%= link_to "Edit Application", edit_application_path(@application) %> | <%= link_to "Delete", application_path(@application), method: :delete, data: { confirm: 'Are you sure?' } %></p>

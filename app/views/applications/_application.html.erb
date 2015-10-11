@@ -1,8 +1,7 @@
 			<tr>
 				<td class="action"><%= link_to "View", application %>
-				<% #if user_signed_in? %>
-				 | <%= link_to "Edit", edit_application_path(application) %>
-				 <% #end %>
+| <%= link_to "Edit", edit_application_path(application) %>
+| <%= link_to "Delete", application_path(application), method: :delete, data: { confirm: 'Are you sure?' } %>
 				</td>
 				<td><%= application.student %></td>
 				<td><%= application.course_option.course.name %></td>

@@ -1,8 +1,7 @@
 <tr>
-	<td><%= link_to "View", institution %>
-		<% #if user_signed_in? %>
-		 	| <%= link_to "Edit", edit_institution_path(institution) %>
-		<% #end %>
+	<td class="action"><%= link_to "View", institution %>
+		 | <%= link_to "Edit", edit_institution_path(institution) %>
+		 | <%= link_to "Delete", institution_path(institution), method: :delete, data: { confirm: 'Are you sure?' } %>
 	</td>
 	<td><%= institution %></td>
 	<td><%= institution.website %></td>

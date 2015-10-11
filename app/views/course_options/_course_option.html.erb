@@ -1,0 +1,9 @@
+			<tr>
+				<td class="action"><%= link_to "View", course_option %>
+				 | <%= link_to "Edit", edit_course_option_path(course_option) %>
+ | <%= link_to "Delete", course_option_path(course_option), method: :delete, data: { confirm: 'Are you sure?' } %>
+				</td>
+				<td><%= course_option.course %></td>
+				<td><%= course_option.institution %></td>
+				<td><%= course_option.intake_date_field %></td>
+			</tr>

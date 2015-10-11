@@ -1,7 +1,7 @@
 <h1><%= @course.name %></h1>
 <p><b>Description:</b> <%= @course.description %></p>
 
-<p><%= link_to "Edit Course", edit_course_path(@course) %></p>
+<p><%= link_to "Edit Course", edit_course_path(@course) %> | <%= link_to "Delete", course_path(@course), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
 <% if @course.course_options.size > 0 %>
 <p>Courses coming up</p>

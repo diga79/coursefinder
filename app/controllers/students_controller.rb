@@ -38,4 +38,10 @@ class StudentsController < ApplicationController
 		end
 	end
 
+	def destroy
+ 		Student.find(params[:id]).destroy
+ 		flash[:notice] = "Student Deleted"
+		redirect_to students_path
+	end
+
 end

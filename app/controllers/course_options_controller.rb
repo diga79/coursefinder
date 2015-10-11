@@ -37,4 +37,11 @@ class CourseOptionsController < ApplicationController
 			render "new"
 		end
 	end
+
+	def destroy
+ 		CourseOption.find(params[:id]).destroy
+ 		flash[:notice] = "Course Option Deleted"
+		redirect_to course_options_path
+	end
+
 end

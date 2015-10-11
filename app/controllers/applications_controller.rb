@@ -10,8 +10,13 @@ class ApplicationsController < ApplicationController
 	end
 
 	def new
+		if (params[:id])
+			@student = Student.find(params[:id])
+		else
+			@student = Student.new
+		end
 		@application = Application.new
-		@student = Student.new
+		@application.student = @student
 	end
 
 	def create
@@ -39,5 +44,9 @@ class ApplicationsController < ApplicationController
 		end
 	end
 
-
+	def destroy
+ 		Application.find(params[:id]).destroy
+ 		flash[:notice] = "Application Deleted"
+		redirect_to applications_path
+	end
 end

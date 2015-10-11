@@ -43,6 +43,12 @@ class InstitutionsController < ApplicationController
 		end
 	end
 
+	def destroy
+ 		Institution.find(params[:id]).destroy
+ 		flash[:notice] = "Institution Deleted"
+		redirect_to institutions_path
+	end
+
 	def only_admins_create_update_company
 		#redirect_to companies_path, :alert => "Only admins can create/update a company" unless current_user.admin
 	end	

@@ -1,5 +1,7 @@
 <h1><%= @institution.name %></h1>
 
-<p><%= link_to "Edit Institution", edit_institution_path(@institution) %></p>
+<p><%= link_to "Edit Institution", edit_institution_path(@institution) %>
+ | <%= link_to "Delete", institution_path(@institution), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
 <p><b>Website:</b> <%= @institution.website %> </p>
 <p><b>Enrolment Fee:</b> <%= @institution.enrolment_fee %></p>
