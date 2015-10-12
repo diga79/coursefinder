@@ -1,0 +1,43 @@
+<% if @application.errors.any? %>
+	<div id="errors">
+			<p>Please correct the following <%= pluralize(@application.errors.count, "error") %></p>
+			<ul>
+				<% @application.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+	</div>
+<% end %>
+
+<%= form_for(@application) do |f| %>
+
+	<% if @student.new_record? %>
+		<div>
+			<%= f.label :student_id %>
+			<%= f.collection_select(:student_id, Student.all.order('first_name,last_name'), :id, :to_s, prompt: true) %>
+		</div>
+	<% else %>
+		<div>
+			Student: <%= @student %> 
+		</div>
+	<% end %>
+	<div>
+		<%= f.label :course_option_id %>
+		<%= f.collection_select(:course_option_id, CourseOption.all.order('intake_date'), :id, :course_name, prompt: true) %>
+	</div>
+	<div>
+		<%= f.label :start_date %>
+		<%= f.date_select :start_date %>
+	</div>		
+	<div>
+		<%= f.label :payment_due_date %>
+		<%= f.date_select :payment_due_date %>
+	</div>		
+	<div>
+		<%= f.label :payment_date %>
+		<%= f.date_select :payment_date %>
+	</div>		
+	<div>
+		<%= f.submit @application.new_record? ? "Create Application" : "Update Application" %>
+	</div>
+<% end %>

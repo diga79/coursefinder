@@ -4,10 +4,10 @@ div.flash {
 	color:#fff;
 }
 
-div.notice, div.alert {
-	background-color:#3B8686;
+div.notice {
+	background-color:#60bf93;
 }
 
 div.alert {
-	background-color:#990000;
+	background-color:#e14f42;
 }

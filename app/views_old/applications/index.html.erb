@@ -1,0 +1,14 @@
+<h1>Applications</h1>
+<p>See below the list of Students Enrolled</p>
+<table>
+	<tbody>
+		<tr id="headerrow">
+			<th>Action</th>
+			<th>Student</th>
+			<th>Course</th>
+			<th>Institution</th>
+			<th>Intake Date</th>
+		</tr>
+		<%= render partial: "application", collection: @applications %> 		
+	</tbody>
+</table>

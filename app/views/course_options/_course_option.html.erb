@@ -2,8 +2,11 @@
 				<td class="action"><%= link_to "View", course_option %>
 				 | <%= link_to "Edit", edit_course_option_path(course_option) %>
  | <%= link_to "Delete", course_option_path(course_option), method: :delete, data: { confirm: 'Are you sure?' } %>
+ | <%= link_to "New Application", new_application_path(:course_option_id => course_option.id) %> 
 				</td>
 				<td><%= course_option.course %></td>
 				<td><%= course_option.institution %></td>
 				<td><%= course_option.intake_date_field %></td>
+				<td><%= course_option.capacity %></td>
+				<td><%= Application.where('course_option_id = ?', course_option.id).size %></td>
 			</tr>

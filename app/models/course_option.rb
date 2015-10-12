@@ -4,6 +4,7 @@ class CourseOption < ActiveRecord::Base
 	has_many :applications
 	has_many :students, :through => :applications
 
+	validates :material_fee, numericality: { only_integer: true, greater_than: 0 }
 	validates :cost, numericality: { only_integer: true, greater_than: 0 }
 	validates :duration, numericality: { only_integer: true, greater_than: 0 }
 	validates :intake_date, length: { minimum: 5 }

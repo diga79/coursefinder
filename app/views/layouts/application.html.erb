@@ -8,44 +8,64 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="container">
-	<header>
-		<%= link_to content_tag('canvas', 'Coursefinder', id: 'logocanvas'), root_url %>
-		<nav1 id="top_links">
-			<ul>
-				<li><%= link_to('Login', new_user_session_path) %></li>
-				<li><%= link_to('Register', new_user_registration_path) %></li>
-				<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-				<li><%= link_to('Settings', courses_path) %></li>
-			</ul>
-		</nav1>
-		<nav>
-			<ul>
-			<% nav_items.each do |item| %>
-				<%= display_nav_items(item[:displaytext], item[:controllername], item[:linkurl]) %>
-			<% end %>
-			</ul>
-		</nav>
-	</header>	
-	<section id="main">
-		<article>
-			<% [:notice, :alert].each do |level| %>
-				<% if flash[level] %>
-					<div class="flash <%= level %>"><%= flash[level] %></div>
-				<% end %>
-			<% end %>
-			<%= user_logged_in_msg %>
- 			<%= yield %>
-		</article>			
-		<aside>
-			<% if content_for?(:aside) %>
-				<%= yield :aside %>
-			<% else %>
-				<%= sidebar %>
-			<% end %>
-		</aside>		
-	</section>
-	<footer><p>Coursefinder is a Sample App</p></footer>
-</div>
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<h1>
+						<a href="index.html">
+							<img src="<%= asset_path( 'logo.png' ) %>" />
+						</a>
+					</h1>
+					<div class="menu_block">
+						
+						<%= login_link %>
+
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<% nav_items.each do |item| %>
+									<%= display_nav_items(item[:displaytext], item[:controllername], item[:linkurl]) %>
+								<% end %>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+<!--==============================Content=================================-->
+		<div id="main" class="content">
+			<div class="container_12">
+				<div class="grid_8">
+					<div class="block2">
+						<% [:notice, :alert].each do |level| %>
+							<% if flash[level] %>
+								<div class="flash <%= level %>"><%= flash[level] %></div>
+							<% end %>
+						<% end %>
+			 			<%= yield %>
+					</div>
+				</div>
+				<div class="grid_3 prefix_1">
+						<%= user_logged_in_msg %>
+						<% if content_for?(:aside) %>
+							<%= yield :aside %>
+						<% else %>
+							<%= sidebar %>
+						<% end %>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="copy">
+						Coursefinder &copy; 2015 | <a href="#">Privacy Policy</a> <br> Website designed by <a href="mailto:diga79@gmail.com" rel="nofollow">Rodrigo Faria</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 </body>
 </html>

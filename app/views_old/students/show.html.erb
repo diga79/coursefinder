@@ -1,0 +1,7 @@
+<h1><%= @student %></h1>
+<p><b>Emaiil:</b> <%= @student.email %></p>
+<p><b>Phone:</b> <%= @student.phone %></p>
+<p><b>Date Birth:</b> <%= @student.date_birth_field %></p>
+
+<p><%= link_to "Edit Student", edit_student_path(@student) %>
+ | <%= link_to "Delete", student_path(@student), method: :delete, data: { confirm: 'Are you sure?' } %></p>

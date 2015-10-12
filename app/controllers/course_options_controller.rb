@@ -14,7 +14,7 @@ class CourseOptionsController < ApplicationController
 	end
 
 	def create
-		@course_option = CourseOption.new(params[:course_option].permit(:institution_id, :course_id, :duration, :cost, :capacity, :intake_date, :more_information))
+		@course_option = CourseOption.new(params[:course_option].permit(:institution_id, :course_id, :duration, :cost, :material_fee, :capacity, :intake_date, :more_information))
 		if @course_option.save
 			flash[:notice] = "Course Created"
 			redirect_to @course_option
@@ -29,7 +29,7 @@ class CourseOptionsController < ApplicationController
 
 	def update
 		@course_option = CourseOption.find(params[:id])
-		if @course_option.update(params[:course_option].permit(:institution_id, :course_id, :duration, :cost, :capacity, :intake_date, :more_information))
+		if @course_option.update(params[:course_option].permit(:institution_id, :course_id, :duration, :cost, :material_fee, :capacity, :intake_date, :more_information))
 			#Usermailer.Courseupdated_email(@course).deliver
 			flash[:notice] = "Course Option Updated"
 			redirect_to @course_option

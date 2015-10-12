@@ -1,0 +1,36 @@
+<% if @student.errors.any? %>
+	<div id="errors">
+			<p>Please correct the following <%= pluralize(@student.errors.count, "error") %></p>
+			<ul>
+				<% @student.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+	</div>
+<% end %>
+
+<%= form_for(@student) do |f| %>
+	<div>
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name %>
+	</div>
+	<div>
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+	</div>	
+	<div>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</div>	
+	<div>
+		<%= f.label :phone %>
+		<%= f.text_field :phone %>
+	</div>
+	<div>
+		<%= f.label :date_birth %>
+		<%= f.date_select :date_birth %>
+	</div>	
+	<div>
+		<%= f.submit @student.new_record? ? "Create Student" : "Update Student" %>
+	</div>
+<% end %>

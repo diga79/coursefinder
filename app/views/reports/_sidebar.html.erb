@@ -1,0 +1,4 @@
+<% @list_reports.each do |item| %>
+	<% report_id = @list_reports.index(item) %>
+	<%= link_to "#{item}", reports_path(:id => report_id) %><br>
+<% end %>

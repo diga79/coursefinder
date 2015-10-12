@@ -1,0 +1,10 @@
+			<tr>
+				<td class="action"><%= link_to "View", application %>
+| <%= link_to "Edit", edit_application_path(application) %>
+| <%= link_to "Delete", application_path(application), method: :delete, data: { confirm: 'Are you sure?' } %>
+				</td>
+				<td><%= application.student %></td>
+				<td><%= application.course_option.course.name %></td>
+				<td><%= application.course_option.institution.name %></td>
+				<td><%= application.start_date_field %></td>
+			</tr>

@@ -16,6 +16,7 @@ course_option<%= count  %>:
   course: <%= courses[n-1] %>
   more_information: More information about <%= courses[n-1] %> at <%= institutions[m-1] %>
   cost: <%= n%8 * 10 %>
+  material_fee: <%= ((n%8)+2) * 50 %>
   duration: <%= n%8 + 3 %> 
   cost:  <%= ((n%8)+2) * 100 %>
   duration: <%= n%8 + m %>

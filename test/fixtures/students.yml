@@ -32,3 +32,31 @@ adam:
   email: adam@test.com.au 
   phone: 0444 212 315
   date_birth: '1989-02-10'
+
+brenda:
+  first_name: Brenda 
+  last_name: Franca
+  email: andrea@test.com.au 
+  phone: 0410 222 300
+  date_birth: '1979-11-20'
+
+luiz:
+  first_name: Luiz
+  last_name: Cavalieri
+  email: fernanda@test.com.au 
+  phone: 0410 111 456
+  date_birth: '1985-10-10'
+
+maria:
+  first_name: Maria
+  last_name: Silvestre
+  email: john@test.com.au 
+  phone: 0410 777 300
+  date_birth: '1974-07-22'
+
+vini:
+  first_name: Vinicius
+  last_name: Costa
+  email: adam@test.com.au 
+  phone: 0444 212 315
+  date_birth: '1989-02-10'

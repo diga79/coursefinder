@@ -1,0 +1,14 @@
+<h1>Courses</h1>
+
+<p>Courses coming up</p>
+<table>
+	<tbody>
+		<tr id="headerrow">
+			<th>Action</th>
+			<th>Course</th>
+			<th>Institution</th>
+			<th>Intake Date</th>
+		</tr>
+		<%= render partial: "course_option", collection: @course_options %> 		
+	</tbody>
+</table>

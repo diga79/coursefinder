@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151011092411) do
+ActiveRecord::Schema.define(version: 20151012095708) do
 
   create_table "applications", force: :cascade do |t|
     t.integer  "student_id"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20151011092411) do
     t.datetime "start_date"
     t.datetime "payment_due_date"
     t.datetime "payment_date"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "total_paid",       default: 0
   end
 
   create_table "course_options", force: :cascade do |t|
