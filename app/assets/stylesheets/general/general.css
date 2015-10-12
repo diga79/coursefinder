@@ -61,7 +61,7 @@ header canvas#logocanvas {
 header nav {
 	float:right;
 	width:70%;
-	margin-top:5%;
+	margin-top:0%;
 	text-align: right;
 }
 
@@ -69,24 +69,53 @@ header nav ul {
 	list-style:none;
 	display:inline;
 	border-bottom:1px solid #cdcdcd;
-	padding-left:0;
-	
+	padding-left:0;	
 }
 
 header nav li {
 	display:inline;
 }
 
-header nav li a {
+header nav li a  {
 	color:#ccc;
 	padding:5px 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	font-size:0.8em;
-	font-weight: 300;
+	font-size:12px;
 }
 
 header nav li a:hover, header nav li.active a {
+	text-decoration: none;
+	color:#fff;
+}
+
+header nav1 {
+	float:right;
+	width:70%;
+	margin-top:0;
+	text-align: right;
+}
+
+header nav1 ul {
+	list-style:none;
+	display:inline;
+	border-bottom:1px solid #cdcdcd;
+	padding-left:0;	
+}
+
+header nav1 li {
+	display:inline;
+}
+
+header nav1 li a  {
+	color:#ccc;
+	padding:5px 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size:10px;
+}
+
+header nav1 li a:hover, header nav1 li.active a {
 	text-decoration: none;
 	color:#fff;
 }
