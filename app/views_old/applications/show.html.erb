@@ -1,9 +1,0 @@
-<h1><%= @application.student %></h1>
-<p><b>Course:</b> <%= @application.course_option.course.name %></p>
-<p><b>Institution:</b> <%= @application.course_option.institution.name %></p>
-<p><b>Start Date:</b> <%= @application.start_date_field %></p>
-<p><b>Payment Due Date:</b> <%= @application.payment_due_date_field %></p>
-<p><b>Payment Date:</b> <%= @application.payment_date_field %></p>
-<p><b>Total Paid:</b> </p>
-
-<p><%= link_to "Edit Application", edit_application_path(@application) %> | <%= link_to "Delete", application_path(@application), method: :delete, data: { confirm: 'Are you sure?' } %></p>
