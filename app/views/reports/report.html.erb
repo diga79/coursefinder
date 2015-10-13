@@ -28,7 +28,7 @@
 		  <%= submit_tag("Search") %>
 		<% end %>
 
-		<br><b><%= @enrolments.size %></b> enrolments between <%= @date1.strftime('%d/%m/%Y') %> and <%= @date2.strftime('%d/%m/%Y') %> 
+		<br><b><%= @enrolments.size %></b> enrolments between <%= @date1.strftime('%d/%m/%Y') %> and <%= @date2.strftime('%d/%m/%Y') %><br>
 		<table>
 		<tbody>
 			<tr>
@@ -41,15 +41,20 @@
 		</tbody>
 		</table>
 <% elsif @id == 1 %>
-		<br><b><%= @courses.size %></b> Popular courses
+		<br><b><%= @courses.size %></b> Popular courses<br>
+		
 		<table>
 		<tbody>
 			<tr>
 				<th>Course Name</th>
-				<th>Institution</th>
 				<th>Students</th>
 			</tr>
-			<%= render partial: "course", collection: @courses %> 
+			<% @courses.each do |course| %>
+			<tr>
+				<td><%= course[0] %></td>
+				<td><%= course[1] %></td>
+			</tr>
+			<% end %>
 		</tbody>
 		</table>
 <% elsif @id == 2 %>

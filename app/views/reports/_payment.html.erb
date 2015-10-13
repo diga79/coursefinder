@@ -1,7 +1,8 @@
+			<% total_to_pay = payment.course_option.cost + payment.course_option.material_fee + payment.course_option.institution.enrolment_fee %>
 			<tr>
-				<td>student</td>
-				<td>institution</td>
-				<td>course name</td>
-				<td>total to pay</td>
-				<td>due date</td>
+				<td><%= payment.student %></td>
+				<td><%= payment.course_option.institution.name %></td>
+				<td><%= payment.course_option.course.name %></td>
+				<td><%= total_to_pay %></td>
+				<td><%= payment.payment_due_date_field %></td>
 			</tr>

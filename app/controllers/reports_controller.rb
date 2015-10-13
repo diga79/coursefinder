@@ -1,7 +1,13 @@
 class ReportsController < ApplicationController
 	before_filter :authenticate_user!
 	
-	@@list_reports = ["Enrolments per Period", "Popular Courses", "Birthday list", "Possible Payments" ]
+	@@list_reports = 
+	[
+		"Enrolments per Period", 
+		"Popular Courses", 
+		"Birthday list", 
+		"Possible Payments" 
+	]
 
 	def report
 		@list_reports = @@list_reports
@@ -19,14 +25,14 @@ class ReportsController < ApplicationController
 				else
 					#@search_form = params[:search_form]
 					@date1 = Date.today 
-					@date2 = Date.today + 30
+					@date2 = Date.today + 90
 				end
 
 				@enrolments = Application.where("start_date between :start_date AND :end_date",
   {start_date: @date1, end_date: @date2} )
 
 			elsif @id == 1
-				@courses = Course.all
+				@courses = CourseOption.select("courses.name").joins(:applications, :course).group('courses.name').order('count(*) desc').count
 			elsif @id == 2
 				@students = Student.all
 				#where ('month(date_birth) = ', Date.today.month )
@@ -39,11 +45,10 @@ class ReportsController < ApplicationController
 				else
 					#@search_form = params[:search_form]
 					@date1 = Date.today 
-					@date2 = Date.today + 30
+					@date2 = Date.today + 90
 				end
-				
-				@payments = Application.all
-				#where (month(payment_due_date) = ', Date.today.month )
+				@payments = Application.all.where("payment_due_date between :start_date AND :end_date",
+  {start_date: @date1, end_date: @date2} )
 			end
 
 		else

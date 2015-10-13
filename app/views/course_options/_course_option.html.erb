@@ -1,3 +1,4 @@
+			<% enrolled = Application.where('course_option_id = ?', course_option.id).size %>
 			<tr>
 				<td class="action"><%= link_to "View", course_option %>
 				 | <%= link_to "Edit", edit_course_option_path(course_option) %>
@@ -8,5 +9,6 @@
 				<td><%= course_option.institution %></td>
 				<td><%= course_option.intake_date_field %></td>
 				<td><%= course_option.capacity %></td>
-				<td><%= Application.where('course_option_id = ?', course_option.id).size %></td>
+				<td><%= enrolled %></td>
+				<td><%= course_option.capacity-enrolled %></td>
 			</tr>
