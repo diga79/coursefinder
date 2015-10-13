@@ -11,7 +11,7 @@ aipe:
   enrolment_fee: 200
 
 kaplan:
-  name: kaplan 
+  name: Kaplan 
   website: www.kaplan.nsw.edu.au 
   enrolment_fee: 200
 
@@ -27,5 +27,30 @@ ilsc:
 
 selc:
   name: SELC 
+  website: www.selc.com.au 
+  enrolment_fee: 200
+
+ait:
+  name: AIT 
+  website: www.ait.nsw.edu.au 
+  enrolment_fee: 200
+
+greenwich:
+  name: Greenwich College 
+  website: www.greenwich.nsw.edu.au 
+  enrolment_fee: 200
+
+sbta:
+  name: SBTA 
+  website: www.sbta.com.au
+  enrolment_fee: 200
+
+stepone:
+  name: Step One 
+  website: www.stepone.com.au 
+  enrolment_fee: 200
+
+australasia:
+  name: Academies Australasia
   website: www.selc.com.au 
   enrolment_fee: 200

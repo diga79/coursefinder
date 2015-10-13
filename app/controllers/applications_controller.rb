@@ -2,7 +2,7 @@ class ApplicationsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@applications = Application.all
+		@applications = Application.all.paginate(:page => params[:page])
 	end
 
 	def show

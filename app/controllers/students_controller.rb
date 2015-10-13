@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@students = Student.all
+		@students = Student.all.paginate(:page => params[:page])
 	end
 
 	def show

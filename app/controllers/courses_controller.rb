@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@courses = Course.all
+		@courses = Course.all.paginate(:page => params[:page])
 		respond_to do |format|
 			format.html
 			format.csv { send_data Course.export1_csv(@courses), type: 'text/csv; charset=utf-8; header=present', disposition: 'attachment; filename=courses.csv' }
