@@ -4,106 +4,104 @@
 	Select one of the Reports Available
 <% else %>
 	<h2><%= @list %></h2>
+
+		<% if @search_form == 1 %>
+			<% @date_form1 = @date1 %>
+			<% @date_form2 = @date2 %>
+
+		<% else %>
+			<% @date_form1 = Date.today %>
+			<% @date_form2 = Date.today + @filter_days %>
+		<% end %>
+<% if @id != 1 %>
+		<%= form_tag({controller: "reports", action: "report"}, method: "get" ) do %>
+<% if @id == 0 || @id == 3 %> 
+		  <%= label_tag(:date1, "From:") %>
+		  <%= select_date @date_form1, prefix: :date1 %>
+
+		  <%= label_tag(:date2, "To:") %>
+		  <%= select_date @date_form2, prefix: :date2 %>
+
+		  <%= label_tag(:institution_id, "Institution:") %>
+		  <%= collection_select(nil, :institution_id, Institution.all, :id, :name, prompt: true)  %>
+
+		  <%= label_tag(:course_id, "Course:") %>
+		  <%= collection_select(nil, :course_id, Course.all, :id, :name, prompt: true)  %>
+
+<% elsif @id == 2 %>
+		  <%= label_tag(:month_id, "Month:") %>
+		  <%= select_tag(:month_id, options_for_select([['January', '01'], ['February', '02'], ['March','03'], ['April','04'], ['May','05'], ['June','06'], ['July','07'], ['August','08'], ['September','09'], ['October','10'], ['November','11'], ['December','12'] ], @month_id)) %>
 <% end %>
 
-<% if @id == 0 %>	
-		<% if @search_form == 1 %>
-			<% @date_form1 = @date1 %>
-			<% @date_form2 = @date2 %>
-		<% else %>
-			<% @date_form1 = Date.today %>
-			<% @date_form2 = Date.today + 90 %>
-		<% end %>
-
-		<%= form_tag({controller: "reports", action: "report"}, method: "get" ) do %>
-		  <%= label_tag(:date1, "From:") %>
-		  <%= select_date @date_form1, prefix: :date1 %>
-
-		  <%= label_tag(:date2, "To:") %>
-		  <%= select_date @date_form2, prefix: :date2 %>
-
 		  <%= hidden_field_tag "id", @id %>
 		  <%= hidden_field_tag "search_form", 1 %>
 
 		  <%= submit_tag("Search") %>
 		<% end %>
+<% end %>
 
-		<br><b><%= @enrolments.size %></b> enrolments between <%= @date1.strftime('%d/%m/%Y') %> and <%= @date2.strftime('%d/%m/%Y') %><br>
-		<table>
-		<tbody>
-			<tr>
-				<th>User</th>
-				<th>Course Name</th>
-				<th>Institution</th>
-				<th>Start Date</th>
-			</tr>
-			<%= render partial: "enrolment", collection: @enrolments %> 
-		</tbody>
-		</table>
-<% elsif @id == 1 %>
-		<br><b><%= @courses.size %></b> Popular courses<br>
-		
-		<table>
-		<tbody>
-			<tr>
-				<th>Course Name</th>
-				<th>Students</th>
-			</tr>
-			<% @courses.each do |course| %>
-			<tr>
-				<td><%= course[0] %></td>
-				<td><%= course[1] %></td>
-			</tr>
-			<% end %>
-		</tbody>
-		</table>
-<% elsif @id == 2 %>
-		<br><b><%= @students.size %></b> Students
-		<table>
-		<tbody>
-			<tr>
-				<th>Student</th>
-				<th>Date Birth</th>
-			</tr>
-			<%= render partial: "student", collection: @students %> 
-		</tbody>
-		</table>
+	<% if @id == 0 %>	
 
-<% elsif @id == 3 %>
-		<% if @search_form == 1 %>
-			<% @date_form1 = @date1 %>
-			<% @date_form2 = @date2 %>
-		<% else %>
-			<% @date_form1 = Date.today %>
-			<% @date_form2 = Date.today + 90 %>
-		<% end %>
+			<br><b><%= @enrolments.size %></b> enrolments between <%= @date1.strftime('%d/%m/%Y') %> and <%= @date2.strftime('%d/%m/%Y') %><br>
+			<table>
+			<tbody>
+				<tr>
+					<th>User</th>
+					<th>Course Name</th>
+					<th>Institution</th>
+					<th>Start Date</th>
+				</tr>
+				<%= render partial: "enrolment", collection: @enrolments %> 
+			</tbody>
+			</table>
 
-		<%= form_tag({controller: "reports", action: "report"}, method: "get" ) do %>
-		  <%= label_tag(:date1, "From:") %>
-		  <%= select_date @date_form1, prefix: :date1 %>
+	<% elsif @id == 1 %>
+			<br><b><%= @courses.size %></b> Popular courses<br>
+			
+			<table>
+			<tbody>
+				<tr>
+					<th>Course Name</th>
+					<th>Students</th>
+				</tr>
+				<% @courses.each do |course| %>
+				<tr>
+					<td><%= course[0] %></td>
+					<td><%= course[1] %></td>
+				</tr>
+				<% end %>
+			</tbody>
+			</table>
 
-		  <%= label_tag(:date2, "To:") %>
-		  <%= select_date @date_form2, prefix: :date2 %>
+	<% elsif @id == 2 %>
+			<br><b><%= @students.size %></b> Students
+			<table>
+			<tbody>
+				<tr>
+					<th>Student</th>
+					<th>Date Birth</th>
+				</tr>
+				<%= render partial: "student", collection: @students %> 
+			</tbody>
+			</table>
 
-		  <%= hidden_field_tag "id", @id %>
-		  <%= hidden_field_tag "search_form", 1 %>
+	<% elsif @id == 3 %>
 
-		  <%= submit_tag("Search") %>
-		<% end %>
+			<br><b><%= @payments.size %></b> Possible payments between <%= @date1.strftime('%d/%m/%Y') %> and <%= @date2.strftime('%d/%m/%Y') %> 
+			<table>
+			<tbody>
+				<tr>
+					<th>Student</th>
+					<th>Institution</th>
+					<th>Course</th>
+					<th>Total to Pay</th>
+					<th>Due Date</th>
+				</tr>
+				<%= render partial: "payment", collection: @payments %> 
+			</tbody>
+			</table>
+	<% end %>
 
-		<br><b><%= @payments.size %></b> Possible payments between <%= @date1.strftime('%d/%m/%Y') %> and <%= @date2.strftime('%d/%m/%Y') %> 
-		<table>
-		<tbody>
-			<tr>
-				<th>Student</th>
-				<th>Institution</th>
-				<th>Course</th>
-				<th>Total to Pay</th>
-				<th>Due Date</th>
-			</tr>
-			<%= render partial: "payment", collection: @payments %> 
-		</tbody>
-		</table>
 <% end %>
 
 <% content_for :aside do %>

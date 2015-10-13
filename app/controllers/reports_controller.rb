@@ -8,53 +8,56 @@ class ReportsController < ApplicationController
 		"Birthday list", 
 		"Possible Payments" 
 	]
+	@@filter_days = 90
 
 	def report
 		@list_reports = @@list_reports
-		@weeks = 60 * 60 * 24 * 7
+		@filter_days = @@filter_days
+
+		@search_form = params[:search_form].to_i
+		@date1 = Date.today 
+		@date2 = Date.today + @@filter_days
+		@institution_id = @course_id = 0
+		@month_id =  Date.today.mon
+
 		if (params[:id])
 			@id = params[:id].to_i
 			@list = @list_reports.at(@id)
 
-			if @id == 0 
-				@search_form = params[:search_form].to_i
-				if @search_form == 1
+			if @search_form == 1
+				if @id == 0 || @id == 3
 					@date1 = Date.civil(params[:date1][:year].to_i, params[:date1][:month].to_i, params[:date1][:day].to_i)
-					
 					@date2 = Date.civil(params[:date2][:year].to_i, params[:date2][:month].to_i, params[:date2][:day].to_i)
-				else
-					#@search_form = params[:search_form]
-					@date1 = Date.today 
-					@date2 = Date.today + 90
+					@institution_id = params[:institution_id].to_i
+					@course_id = params[:course_id].to_i
+				elsif @id = 2
+					@month_id = params[:month_id]
 				end
+			end
+			@institution_text = "institution_id = #{@institution_id} and "
+			@course_text = "course_id = #{@course_id} and "
 
-				@enrolments = Application.where("start_date between :start_date AND :end_date",
+			if @id == 0 
+				@enrolments = Application.joins(:course_option).where("#{ @institution_text if @institution_id > 0 }#{ @course_text if @course_id > 0 }start_date between :start_date AND :end_date",
   {start_date: @date1, end_date: @date2} )
 
 			elsif @id == 1
 				@courses = CourseOption.select("courses.name").joins(:applications, :course).group('courses.name').order('count(*) desc').count
-			elsif @id == 2
-				@students = Student.all
-				#where ('month(date_birth) = ', Date.today.month )
-			elsif @id == 3
-				@search_form = params[:search_form].to_i
-				if @search_form == 1
-					@date1 = Date.civil(params[:date1][:year].to_i, params[:date1][:month].to_i, params[:date1][:day].to_i)
-					
-					@date2 = Date.civil(params[:date2][:year].to_i, params[:date2][:month].to_i, params[:date2][:day].to_i)
-				else
-					#@search_form = params[:search_form]
-					@date1 = Date.today 
-					@date2 = Date.today + 90
-				end
-				@payments = Application.all.where("payment_due_date between :start_date AND :end_date",
-  {start_date: @date1, end_date: @date2} )
-			end
 
+			elsif @id == 2
+				@students = Student.where("strftime('%m', date_birth) = '#{@month_id}'")
+
+			elsif @id == 3
+				@payments = Application.joins(:course_option).where("#{ @institution_text if @institution_id > 0 }#{ @course_text if @course_id > 0 }payment_due_date between :start_date AND :end_date", 
+				 {start_date: @date1, end_date: @date2} )
+			end
 		else
 			@id = -1
 			@list = @list_reports
 		end
 	end
 
+	def filter_days
+		@@filter_days
+	end
 end
