@@ -1,5 +1,21 @@
 <h1>Applications</h1>
-<p>See below the list of Students Enrolled</p>
+
+<%= form_tag({controller: "applications", action: "index"}, method: "get" ) do %>
+
+	<%= label_tag(:search, "Name:") %>	
+	<%= text_field_tag(:search, @search) %>
+
+	<%= label_tag(:course_id, "Course:") %>
+	<%= collection_select(nil, :course_id, Course.all, :id, :name, prompt: true)  %>
+	
+	<%= label_tag(:institution_id, "Institution:") %>
+	<%= collection_select(nil, :institution_id, Institution.all, :id, :name, prompt: true)  %>
+
+	<%= hidden_field_tag "search_form", 1 %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<p><%= @applications.count %> Students Enrolled</p>
 <table>
 	<tbody>
 		<tr id="headerrow">

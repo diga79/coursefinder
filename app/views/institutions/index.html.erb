@@ -1,6 +1,18 @@
 <h1>Institutions</h1>
-<% if @institutions.size > 0 %>
-	<p>Here are all the Institutions</p>
+<%= form_tag({controller: "institutions", action: "index"}, method: "get" ) do %>
+
+	<%= label_tag(:search, "Name:") %>	
+	<%= text_field_tag(:search, @search) %>
+	
+	<%= label_tag(:course_id, "Offering:") %>
+	<%= collection_select(nil, :course_id, Course.all, :id, :name, prompt: true)  %>
+
+	<%= hidden_field_tag "search_form", 1 %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<% if @institutions.count > 0 %>
+	<p><%= @institutions.count %> Institutions Found</p>
 	<table>
 	<tbody>
 		<tr>
@@ -12,7 +24,7 @@
 	</tbody>
 	</table>
 <% else %>
-	<p>No Institutions created</p>
+	<p>No Institutions</p>
 <% end %>
 
 <%= will_paginate @institutions %>

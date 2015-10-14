@@ -1,0 +1,13 @@
+<%= render "layouts/menuzinho" %> 
+<h2>Frequency Types</h2>
+<table>
+	<tbody>
+		<tr>
+			<th>Action</th>
+			<th>Frequency Type</th>
+		</tr>
+		<%= render partial: "frequency_type", collection: @frequency_types %> 
+	</tbody>
+</table>
+
+<%= will_paginate @frequency_types %>

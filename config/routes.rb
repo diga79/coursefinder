@@ -9,8 +9,6 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   get 'reports' => 'reports#report'
-  get 'reports/:id' => 'report#show'
-
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -22,6 +20,8 @@ Rails.application.routes.draw do
   resources :course_intakes
   resources :applications
   resources :students
+  resources :frequency_types
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   # Example resource route with options:

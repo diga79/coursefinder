@@ -5,24 +5,18 @@
 # below each fixture, per the syntax in the comments below
 #
 <% institutions = ["aipe","kaplan","navitas","ilsc", "selc","ait","greenwich","sbta","stepone","australasia"] %>
-<% courses = ["business","accounting","it","hospitality", "it", "childcare", "ge", "ielts", "bba", "ba", "mba", "event", "design"] %>
+<% courses = ["business","accounting","it","hospitality", "childcare", "ge", "ielts", "bba", "ba", "mba", "event", "design"] %>
 
-<% count = 1 %>
-<% 4.times do |x| %>
 <% institutions.size.times do |m| %>
 <% courses.size.times do |n| %>
-course_option<%= count  %>:
+<%= institutions[m-1] %>_<%= courses[n-1] %>:
   institution: <%= institutions[m-1] %>
   course: <%= courses[n-1] %>
   more_information: More information about <%= courses[n-1] %> at <%= institutions[m-1] %>
-  cost: <%= n%8 * 10 %>
+  cost: <%= n%8 * 1500 %>
   material_fee: <%= ((n%8)+2) * 50 %>
-  duration: <%= n%8 + 3 %> 
-  cost:  <%= ((n%8)+2) * 100 %>
-  duration: <%= n%8 + m %>
-  intake_date: <%= Time.now + ((x+4)*7*24*60*60) %>
-  capacity: 25
-  <% count += 1 %>
-<% end %>
+  payments: <%= n%8 + 1 %>
+  frequency_number: <%= n % 3 == 0 ? 74 : 3 %> 
+  frequency_type: <%= n % 3 == 0 ? 'perday' : 'permonth' %>
 <% end %>
 <% end %>

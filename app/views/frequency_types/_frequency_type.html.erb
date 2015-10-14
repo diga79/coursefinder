@@ -1,0 +1,7 @@
+<tr>
+	<td class="action"><%= link_to "View", frequency_type %>
+ | <%= link_to "Edit", edit_frequency_type_path(frequency_type) %>
+ | <%= link_to "Delete", frequency_type_path(frequency_type), method: :delete, data: { confirm: 'Are you sure?' } %>
+	</td>
+	<td><%= frequency_type %></td>
+</tr>

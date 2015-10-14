@@ -40,16 +40,38 @@ class ReportsController < ApplicationController
 			if @id == 0 
 				@enrolments = Application.joins(:course_option).where("#{ @institution_text if @institution_id > 0 }#{ @course_text if @course_id > 0 }start_date between :start_date AND :end_date",
   {start_date: @date1, end_date: @date2} )
+				respond_to do |format|
+					format.html #show.html.erb
+					format.xml { render xml: @enrolments }
+					format.json { render json: @enrolments }
+				end		
+
 
 			elsif @id == 1
 				@courses = CourseOption.select("courses.name").joins(:applications, :course).group('courses.name').order('count(*) desc').count
+				respond_to do |format|
+					format.html #show.html.erb
+					format.xml { render xml: @courses }
+					format.json { render json: @courses }
+				end		
 
 			elsif @id == 2
 				@students = Student.where("strftime('%m', date_birth) = '#{@month_id}'")
+				respond_to do |format|
+					format.html #show.html.erb
+					format.xml { render xml: @students }
+					format.json { render json: @students }
+				end		
 
 			elsif @id == 3
 				@payments = Application.joins(:course_option).where("#{ @institution_text if @institution_id > 0 }#{ @course_text if @course_id > 0 }payment_due_date between :start_date AND :end_date", 
 				 {start_date: @date1, end_date: @date2} )
+				respond_to do |format|
+					format.html #show.html.erb
+					format.xml { render xml: @payments }
+					format.json { render json: @payments }
+				end		
+
 			end
 		else
 			@id = -1

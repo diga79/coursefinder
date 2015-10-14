@@ -1,0 +1,28 @@
+<h1>Courses</h1>
+
+<%= form_tag({controller: "course_options", action: "index"}, method: "get" ) do %>
+
+	<%= label_tag(:course_id, "Course:") %>
+	<%= collection_select(nil, :course_id, Course.all, :id, :name, prompt: true)  %>
+	
+	<%= label_tag(:institution_id, "Institution:") %>
+	<%= collection_select(nil, :institution_id, Institution.all, :id, :name, prompt: true)  %>
+
+	<%= hidden_field_tag "search_form", 1 %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<p><%= @course_intakes.count  %> Intakes Found</p>
+<table>
+	<tbody>
+		<tr id="headerrow">
+			<th>Action</th>
+			<th>Course</th>
+			<th>Institution</th>
+			<th>Enrolled</th>
+			<th>Intake Dates</th>
+		</tr>
+		<%= render partial: "course_option", collection: @course_options %> 		
+	</tbody>
+</table>
+<%= will_paginate @course_options %>

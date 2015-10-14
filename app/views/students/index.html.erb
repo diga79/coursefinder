@@ -1,6 +1,16 @@
 <h1>Students</h1>
 
-<p>Here are all the Students</p>
+<%= form_tag({controller: "students", action: "index"}, method: "get" ) do %>
+
+	<%= label_tag(:search, "Name:") %>	
+	<%= text_field_tag(:search, @search) %>
+	
+	<%= hidden_field_tag "search_form", 1 %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+
+<p><%= @students.count %> Students Found</p>
 <table>
 	<tbody>
 		<tr>

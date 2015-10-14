@@ -5,67 +5,22 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% week = 7*24*60*60 %>
-application1:
-  student: andrea
-  course_option: course_option21
-  start_date: <%= Date.today + 8 %>
-  payment_due_date: <%= Date.today + 6 %>
-  payment_date: <%= Date.today + 10 %>
-  total_paid: 345
+<% institutions = ["aipe","kaplan","navitas","ilsc", "selc","ait","greenwich","sbta","stepone","australasia"] %>
+<% courses = ["business","accounting","it","hospitality", "childcare", "ge", "ielts", "bba", "ba", "mba", "event", "design"] %>
+<% students = ["andrea", "fernanda", "john", "adam", "brenda", "luiz", "maria", "vini"] %>
 
-application2:
-  student: fernanda
-  course_option: course_option120
-  start_date: <%= Date.today + 18 %>
-  payment_due_date: <%= Date.today + 18 %>
-  payment_date: <%= Date.today + 18 %>
-  total_paid: 430
-
-application3:
-  student: john
-  course_option: course_option87
-  start_date: <%= Date.today + 6 %>
-  payment_due_date: <%= Date.today + 12 %>
-  payment_date: <%= Date.today + 38 %>
-  total_paid: 250
-
-application4:
-  student: adam
-  course_option: course_option34
-  start_date: <%= Date.today + 48 %>
-  payment_due_date: <%= Date.today + 40 %>
-  payment_date: <%= Date.today + 50 %>
-  total_paid: 450
-
-application5:
-  student: brenda
-  course_option: course_option2
-  start_date: <%= Date.today + 82 %>
-  payment_due_date: <%= Date.today + 80 %>
-  payment_date: <%= Date.today + 80 %>
-  total_paid: 600
-
-application6:
-  student: luiz
-  course_option: course_option59
-  start_date: <%= Time.now + 4 * week %>
-  payment_due_date: <%= Time.now + 3 * week %>
-  payment_date: <%= Time.now + 3 * week %>
-  total_paid: 300
-
-application7:
-  student: maria
-  course_option: course_option92
-  start_date: <%= Date.today + 38 %>
-  payment_due_date: <%= Date.today + 43 %>
-  payment_date: <%= Date.today + 45 %>
-  total_paid: 400
-
-application8:
-  student: vini
-  course_option: course_option102
-  start_date: <%= Date.today + 13 %>
-  payment_due_date: <%= Date.today + 50 %>
-  payment_date: <%= Date.today + 52 %>
-  total_paid: 300
+<% count = 1 %>
+<% students.size.times do |s| %>
+<% institutions.size.times do |m| %>
+<% courses.size.times do |n| %>
+application<%= count  %>:
+  student: <%= students[s-1] %>
+  course_option: <%= institutions[m-1] %>_<%= courses[n-1] %>
+  start_date: <%= Date.today + count %>
+  payment_due_date: <%= Date.today + count %>
+  payment_date: <%= Date.today + count %>
+  total_paid: <%= n % 3 == 0 ? 300 : 400 %>
+  <% count += 1 %>
+<% end %>
+<% end %>
+<% end %>

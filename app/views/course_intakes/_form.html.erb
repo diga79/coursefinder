@@ -1,0 +1,25 @@
+<h2><%= @course_option.course.name %> - <%= @course_option.institution.name %></h2>
+<% if @course_intake.errors.any? %>
+	<div id="errors">
+			<p>Please correct the following <%= pluralize(@course_intake.errors.count, "error") %></p>
+			<ul>
+				<% @course_intake.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+	</div>
+<% end %>
+
+<%= form_for(@course_intake) do |f| %>
+	<div>
+		<%= f.label :course_option_id %>
+		<%= f.collection_select(:course_option_id, CourseOption.joins(:course).where('course_options.id = ?',@course_option.id), :id, :course_name) %>
+	</div>
+	<div>
+		<%= f.label :intake_date %>
+		<%= f.date_select :intake_date %>
+	</div>	
+	<div>
+		<%= f.submit @course_intake.new_record? ? "Create Course Intake" : "Update Course Intake" %>
+	</div>
+<% end %>

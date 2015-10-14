@@ -2,7 +2,31 @@ class ApplicationsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@applications = Application.all.paginate(:page => params[:page])
+		@search_form = params[:search_form].to_i
+		@institution_id = @course_id = 0
+		@search = @text_course = @text_institution = nil
+
+		if @search_form
+			@institution_id = params[:institution_id].to_i
+			@course_id = params[:course_id].to_i
+			@search = params[:search]
+			if !@search.nil?
+				@text_search = "and (first_name like '%#{@search}%' or last_name like '%#{@search}%')"
+			end			
+			if @course_id != 0
+				@text_course = "and course_id = #{@course_id}"
+			end
+			if @institution_id != 0
+				@text_institution = "and institution_id = #{@institution_id}"
+			end
+		end
+		@applications = Application.joins(:course_option, :student).where("1=1 #{ @text_institution } #{ @text_course } #{ @text_search }") .paginate(:page => params[:page])
+		respond_to do |format|
+			format.html #show.html.erb
+			format.xml { render xml: @applications }
+			format.json { render json: @applications }
+		end
+
 	end
 
 	def show

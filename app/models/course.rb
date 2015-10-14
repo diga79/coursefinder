@@ -5,6 +5,6 @@ class Course < ActiveRecord::Base
 	validates :name, length: { minimum: 3 }
 
 	def to_s
-		"#{name}"
+		name
 	end
 end

@@ -4,7 +4,9 @@ class CoursesController < ApplicationController
 	def index
 		@courses = Course.all.paginate(:page => params[:page])
 		respond_to do |format|
-			format.html
+			format.html #show.html.erb
+			format.xml { render xml: @courses }
+			format.json { render json: @courses }
 			format.csv { send_data Course.export1_csv(@courses), type: 'text/csv; charset=utf-8; header=present', disposition: 'attachment; filename=courses.csv' }
 		end
 	end

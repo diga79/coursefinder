@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012095708) do
+ActiveRecord::Schema.define(version: 20151014055401) do
 
   create_table "applications", force: :cascade do |t|
     t.integer  "student_id"
@@ -24,17 +24,24 @@ ActiveRecord::Schema.define(version: 20151012095708) do
     t.integer  "total_paid",       default: 0
   end
 
+  create_table "course_intakes", force: :cascade do |t|
+    t.integer  "course_option_id"
+    t.datetime "intake_date"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "course_options", force: :cascade do |t|
     t.integer  "institution_id"
     t.integer  "course_id"
     t.string   "more_information"
     t.integer  "cost"
-    t.integer  "duration"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "material_fee"
-    t.datetime "intake_date"
-    t.integer  "capacity"
+    t.integer  "payments",          default: 1
+    t.integer  "frequency_number",  default: 1
+    t.integer  "frequency_type_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -42,6 +49,12 @@ ActiveRecord::Schema.define(version: 20151012095708) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "description"
+  end
+
+  create_table "frequency_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "institutions", force: :cascade do |t|

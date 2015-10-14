@@ -1,23 +1,13 @@
 			<% enrolled = Application.where('course_option_id = ?', course_option.id).size %>
-			<% capacity = course_option.capacity %>
-			<% available = capacity - enrolled %>
 			<tr>
 				<td class="action"><%= link_to "View", course_option %>
-				 | <%= link_to "Edit", edit_course_option_path(course_option) %>
- | <%= link_to "Delete", course_option_path(course_option), method: :delete, data: { confirm: 'Are you sure?' } %>
- <% if available > 0 %>
- 	| <%= link_to "New Application", new_application_path(:course_option_id => course_option.id) %> 
- <% end %>
+				 | <%= link_to "Edit", edit_course_option_path(course_option) %> 
+| <%= link_to "Delete", course_option_path(course_option), method: :delete, data: { confirm: 'Are you sure?' } %> 
+| <%= link_to "New Application", new_application_path(:course_option_id => course_option.id) %>  
+| <%= link_to 'New Intake', new_course_intake_path(:course_option_id => course_option.id ) %>
 				</td>
 				<td><%= course_option.course %></td>
 				<td><%= course_option.institution %></td>
-				<td><%= course_option.intake_date_field %></td>
-				<td><%= capacity %></td>
 				<td><%= enrolled %></td>
-				<td> <% if available > 0 %>
-						<%= available %>
-					<% else %>
-						Sold Out!
-					<% end %>
-				</td>
+				<td><%= course_option.course_intakes.size %></td>
 			</tr>

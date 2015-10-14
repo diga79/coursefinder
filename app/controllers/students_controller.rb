@@ -2,7 +2,16 @@ class StudentsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@students = Student.all.paginate(:page => params[:page])
+		@search_form = params[:search_form].to_i
+		@text_search = @search = nil
+
+		if @search_form
+			@search = params[:search]
+			if !@search.nil?
+				@text_search = "and (first_name like '%#{@search}%' or last_name like '%#{@search}%')"
+			end
+		end
+		@students = Student.where("1=1 #{@text_search}").paginate(:page => params[:page])
 	end
 
 	def show

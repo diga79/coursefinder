@@ -2,7 +2,32 @@ class InstitutionsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@institutions = Institution.all.paginate(:page => params[:page])
+
+		@search_form = params[:search_form].to_i
+		@course_id = 0
+		@text_course = @text_search = @search = nil
+
+		if @search_form
+			@search = params[:search]
+			@course_id = params[:course_id].to_i
+			if !@search.nil?
+				@text_search = "and name like '%#{@search}%'"
+			end
+			if @course_id != 0
+				@text_course = "and course_id = #{@course_id}"
+			end
+		end
+
+		if @course_id == 0
+			@institutions = Institution.where("1=1 #{@text_search}").paginate(:page => params[:page])
+		else
+			@institutions = Institution.joins(:course_options).where("1=1 #{@text_search} #{@text_course}").paginate(:page => params[:page])			
+		end
+		respond_to do |format|
+			format.html #show.html.erb
+			format.xml { render xml: @institutions }
+			format.json { render json: @institutions }
+		end		
 	end
 
 	def show
