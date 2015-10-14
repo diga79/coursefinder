@@ -1,0 +1,8 @@
+			<tr>
+				<td class="action">
+<%= link_to "View", campu %> | <%= link_to "Edit", edit_campu_path(campu) %> | <%= link_to "Delete", campu_path(campu), method: :delete, data: { confirm: 'Are you sure?' } %>
+ 				</td>
+				<td><%= campu.institution.name %></td>
+				<td><%= campu.name %></td>
+				<td><%= campu.city.name %></td>
+			</tr>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+<% institutions = ["aipe","kaplan","navitas","ilsc", "selc","ait","greenwich","sbta","stepone","australasia"] %>
+<% cities = ["sydney","brisbane","melbourne","gold", "perth","adelaide"] %>
+
+<% 2.times do |x| %>
+<% institutions.size.times do |n| %>
+<%= institutions[n-1] %>_<%= cities[x-1] %>:
+  name: <%= institutions[n-1].capitalize %> <%= cities[x-1].capitalize %>
+  institution: <%= institutions[n-1] %>
+  address: <%= n % 3 == 0 ? 'Level 3/393 George St' : 'Level 7/456 Pitt St' %>
+  city: <%= cities[x-1] %>
+  state: <%= n % 3 == 0 ? 'NSW' : 'QLD' %>
+  country_id: 1
+  phone: 02 9290 2366
+<% end %>
+<% end %>

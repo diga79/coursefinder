@@ -4,5 +4,5 @@
 		 | <%= link_to "Delete", institution_path(institution), method: :delete, data: { confirm: 'Are you sure?' } %>
 	</td>
 	<td><%= institution %></td>
-	<td><%= institution.website %></td>
+	<td><%= institution.campus.size %></td>
 </tr>

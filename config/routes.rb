@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   resources :applications
   resources :students
   resources :frequency_types
-
+  resources :cities
+  resources :campus
+  
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   # Example resource route with options:

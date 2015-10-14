@@ -1,0 +1,21 @@
+<h1>Campus</h1>
+
+
+
+<p><%= @campus.count  %> Campuses Found</p>
+<table>
+	<tbody>
+		<tr id="headerrow">
+			<th>Action</th>
+			<th>Institution</th>
+			<th>Name</th>
+			<th>City</th>
+		</tr>
+		<%= render partial: "campu", collection: @campus %> 		
+	</tbody>
+</table>
+<%= will_paginate @campus %>
+
+<% content_for :aside do %>
+	<%= render partial: "sidebar"  %>
+<% end %>

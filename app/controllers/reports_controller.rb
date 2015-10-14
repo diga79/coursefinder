@@ -28,8 +28,8 @@ class ReportsController < ApplicationController
 				if @id == 0 || @id == 3
 					@date1 = Date.civil(params[:date1][:year].to_i, params[:date1][:month].to_i, params[:date1][:day].to_i)
 					@date2 = Date.civil(params[:date2][:year].to_i, params[:date2][:month].to_i, params[:date2][:day].to_i)
-					@institution_id = params[:institution_id].to_i
-					@course_id = params[:course_id].to_i
+					@institution_id = params[:report][:institution_id].to_i
+					@course_id = params[:report][:course_id].to_i
 				elsif @id = 2
 					@month_id = params[:month_id]
 				end

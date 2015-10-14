@@ -1,0 +1,13 @@
+<%= render "layouts/menuzinho" %> 
+<h2>Cities</h2>
+<table>
+	<tbody>
+		<tr>
+			<th>Action</th>
+			<th>City</th>
+		</tr>
+		<%= render partial: "city", collection: @cities %> 
+	</tbody>
+</table>
+
+<%= will_paginate @cities %>

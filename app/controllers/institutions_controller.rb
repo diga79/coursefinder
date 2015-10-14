@@ -33,11 +33,7 @@ class InstitutionsController < ApplicationController
 	def show
 		#render nothing: true
 		@institution = Institution.find(params[:id])
-		respond_to do |format|
-			format.html #show.html.erb
-			format.xml { render xml: @institution }
-			format.json { render json: @institution }
-		end
+		@campus = Campu.where('institution_id = ?', @institution.id )
 	end
 
 	def new

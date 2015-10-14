@@ -1,7 +1,22 @@
 <h1><%= @institution.name %></h1>
-
-<p><%= link_to "Edit Institution", edit_institution_path(@institution) %>
- | <%= link_to "Delete", institution_path(@institution), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-
 <p><b>Website:</b> <%= @institution.website %> </p>
 <p><b>Enrolment Fee:</b> <%= @institution.enrolment_fee %></p>
+
+
+<p><%= @campus.count  %> Campuses Found</p>
+<table>
+	<tbody>
+		<tr id="headerrow">
+			<th>Action</th>
+			<th>Institution</th>
+			<th>Name</th>
+			<th>City</th>
+		</tr>
+		<%= render partial: "campus/campu", collection: @campus %> 		
+	</tbody>
+</table>
+
+<p>
+<%= link_to 'New Campus', new_campu_path(:institution_id => @institution.id ) %> | 
+	<%= link_to "Edit Institution", edit_institution_path(@institution) %>
+ | <%= link_to "Delete", institution_path(@institution), method: :delete, data: { confirm: 'Are you sure?' } %></p>
