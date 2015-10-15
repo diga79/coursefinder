@@ -2,4 +2,8 @@
 
 <h2><%= @frequency_type.name %></h2>
 
-<p><%= link_to "Edit Frequency Type", edit_frequency_type_path(@frequency_type) %> | <%= link_to "Delete", frequency_type_path(@frequency_type), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<p>
+<%= link_to "Edit Frequency Type", edit_frequency_type_path(@frequency_type) %> | 
+<%= link_to "Delete", frequency_type_path(@frequency_type), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'All Frequency Types', frequency_types_path %>
+</p>

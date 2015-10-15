@@ -12,7 +12,9 @@
 	<%= submit_tag("Search") %>
 <% end %>
 
-<p><%= @course_intakes.count  %> Intakes Found</p>
+<p><%= pluralize(@course_intakes.count, "intake".capitalize) %> found</p>
+<%= link_to 'New Intake', new_course_intake_path %>
+
 <table>
 	<tbody>
 		<tr id="headerrow">

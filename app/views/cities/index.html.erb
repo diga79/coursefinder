@@ -1,5 +1,9 @@
 <%= render "layouts/menuzinho" %> 
 <h2>Cities</h2>
+
+<p><%= pluralize(@cities.count, "city".capitalize) %> found</p>
+<%= link_to 'New City', new_city_path %>
+
 <table>
 	<tbody>
 		<tr>

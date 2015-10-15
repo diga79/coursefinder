@@ -4,27 +4,25 @@
 	<%= label_tag(:search, "Name:") %>	
 	<%= text_field_tag(:search, @search) %>
 	
-	<%= label_tag(:course_id, "Offering:") %>
-	<%= collection_select(nil, :course_id, Course.all, :id, :name, prompt: true)  %>
+	<%= label_tag(:course_id, "Course:") %>
+	<%= collection_select(nil, :course_id, Course.all, :id, :name, { selected: @course_id, include_blank: true  })  %>
 
 	<%= hidden_field_tag "search_form", 1 %>
 	<%= submit_tag("Search") %>
 <% end %>
 
-<% if @institutions.count > 0 %>
-	<p><%= @institutions.count %> Institutions Found</p>
-	<table>
-	<tbody>
-		<tr>
-			<th>Action</th>
-			<th>Institution</th>
-			<th>Campus</th>
-		</tr>
-		<%= render partial: "institution", collection: @institutions %>
-	</tbody>
-	</table>
-<% else %>
-	<p>No Institutions</p>
-<% end %>
+
+<p><%= pluralize(@institutions.count, "institution".capitalize) %> found</p>
+<%= link_to 'New Institution', new_institution_path %>
+<table>
+<tbody>
+	<tr>
+		<th>Action</th>
+		<th>Institution</th>
+		<th>Campus</th>
+	</tr>
+	<%= render partial: "institution", collection: @institutions %>
+</tbody>
+</table>
 
 <%= will_paginate @institutions %>

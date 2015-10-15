@@ -1,5 +1,9 @@
 <%= render "layouts/menuzinho" %> 
 <h2>Frequency Types</h2>
+
+<p><%= pluralize(@frequency_types.count, "frequency type".capitalize) %> found</p>
+<%= link_to 'New Frequency Type', new_frequency_type_path %>
+
 <table>
 	<tbody>
 		<tr>

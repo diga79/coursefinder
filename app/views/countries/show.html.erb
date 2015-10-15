@@ -1,0 +1,10 @@
+<%= render "layouts/menuzinho" %> 
+
+<h2><%= @country.name %></h2>
+<p><b>Short Name:</b> <%= @country.short_name %></p>
+
+<p>
+<%= link_to "Edit Country", edit_country_path(@country) %> | 
+<%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'All Countries', countries_path %>
+</p>

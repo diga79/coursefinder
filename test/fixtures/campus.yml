@@ -6,6 +6,7 @@
 #
 <% institutions = ["aipe","kaplan","navitas","ilsc", "selc","ait","greenwich","sbta","stepone","australasia"] %>
 <% cities = ["sydney","brisbane","melbourne","gold", "perth","adelaide"] %>
+<% countries = ["australia","eua","canada","uk", "south africa","malta"] %>
 
 <% 2.times do |x| %>
 <% institutions.size.times do |n| %>
@@ -15,7 +16,7 @@
   address: <%= n % 3 == 0 ? 'Level 3/393 George St' : 'Level 7/456 Pitt St' %>
   city: <%= cities[x-1] %>
   state: <%= n % 3 == 0 ? 'NSW' : 'QLD' %>
-  country_id: 1
+  country: <%= countries[0] %>
   phone: 02 9290 2366
 <% end %>
 <% end %>

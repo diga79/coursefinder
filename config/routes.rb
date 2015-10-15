@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   resources :frequency_types
   resources :cities
   resources :campus
-  
+  resources :countries
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   # Example resource route with options:

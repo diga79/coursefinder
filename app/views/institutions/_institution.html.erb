@@ -1,7 +1,9 @@
 <tr>
-	<td class="action"><%= link_to "View", institution %>
-		 | <%= link_to "Edit", edit_institution_path(institution) %>
-		 | <%= link_to "Delete", institution_path(institution), method: :delete, data: { confirm: 'Are you sure?' } %>
+	<td class="action">
+<%= link_to "View", institution %> | 
+<%= link_to "Edit", edit_institution_path(institution) %> | 
+<%= link_to "Delete", institution_path(institution), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'New Campus', new_campu_path(:institution_id => institution ) %>
 	</td>
 	<td><%= institution %></td>
 	<td><%= institution.campus.size %></td>

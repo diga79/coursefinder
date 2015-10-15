@@ -2,4 +2,8 @@
 
 <h2><%= @city.name %></h2>
 
-<p><%= link_to "Edit City", edit_city_path(@city) %> | <%= link_to "Delete", city_path(@city), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<p>
+<%= link_to "Edit City", edit_city_path(@city) %> | 
+<%= link_to "Delete", city_path(@city), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'All Cities', cities_path %>
+</p>

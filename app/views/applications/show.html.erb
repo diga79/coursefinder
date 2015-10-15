@@ -13,4 +13,8 @@
 <% end %>
 <b>Payment Due Date:</b> <%= @application.payment_due_date_field %></p>
 
-<p><%= link_to "Edit Application", edit_application_path(@application) %> | <%= link_to "Delete", application_path(@application), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<p>
+<%= link_to "Edit Application", edit_application_path(@application) %> | 
+<%= link_to "Delete", application_path(@application), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'All Applications', applications_path %>
+</p>

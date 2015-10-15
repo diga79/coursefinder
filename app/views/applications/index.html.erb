@@ -6,16 +6,17 @@
 	<%= text_field_tag(:search, @search) %>
 
 	<%= label_tag(:course_id, "Course:") %>
-	<%= collection_select(nil, :course_id, Course.all, :id, :name, prompt: true)  %>
+	<%= collection_select(nil, :course_id, Course.all, :id, :name, { selected: @course_id, include_blank: true  })  %>
 	
 	<%= label_tag(:institution_id, "Institution:") %>
-	<%= collection_select(nil, :institution_id, Institution.all, :id, :name, prompt: true)  %>
+	<%= collection_select(nil, :institution_id, Institution.all, :id, :name, { selected: @institution_id, include_blank: true  })  %>
 
 	<%= hidden_field_tag "search_form", 1 %>
 	<%= submit_tag("Search") %>
 <% end %>
 
-<p><%= @applications.count %> Students Enrolled</p>
+<p><%= pluralize(@applications.count, "application".capitalize) %> found</p>
+<%= link_to 'New Application', new_application_path %>
 <table>
 	<tbody>
 		<tr id="headerrow">

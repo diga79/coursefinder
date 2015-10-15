@@ -1,20 +1,20 @@
-<% if @campu.errors.any? %>
+<% if @city.errors.any? %>
 	<div id="errors">
-			<p>Please correct the following <%= pluralize(@campu.errors.count, "error") %></p>
+			<p>Please correct the following <%= pluralize(@city.errors.count, "error") %></p>
 			<ul>
-				<% @campu.errors.full_messages.each do |msg| %>
+				<% @city.errors.full_messages.each do |msg| %>
 					<li><%= msg %></li>
 				<% end %>
 			</ul>
 	</div>
 <% end %>
 
-<%= form_for(@campu) do |f| %>
+<%= form_for(@city) do |f| %>
 	<div>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 	</div>
 	<div>
-		<%= f.submit @campu.new_record? ? "Create Campus" : "Update Campus" %>
+		<%= f.submit @city.new_record? ? "Create City" : "Update City" %>
 	</div>
 <% end %>

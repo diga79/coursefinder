@@ -9,8 +9,8 @@
 	<%= submit_tag("Search") %>
 <% end %>
 
-
-<p><%= @students.count %> Students Found</p>
+<p><%= pluralize(@students.count, "student".capitalize) %> found</p>
+<%= link_to 'New Student', new_student_path %>
 <table>
 	<tbody>
 		<tr>

@@ -1,0 +1,17 @@
+<%= render "layouts/menuzinho" %> 
+<h2>Countries</h2>
+
+<p><%= pluralize(@countries.count, "country".capitalize) %> found</p>
+<%= link_to 'New Country', new_country_path %>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Action</th>
+			<th>Short Name</th>
+			<th>Country</th>
+		</tr>
+		<%= render partial: "country", collection: @countries %> 
+	</tbody>
+</table>
+<%= will_paginate @countries %>

@@ -1,8 +1,7 @@
 <h1>Campus</h1>
 
-
-
-<p><%= @campus.count  %> Campuses Found</p>
+<p><%= pluralize(@campus.count, "campus".capitalize) %> found</p>
+<%= link_to 'New Campus', new_campu_path %>
 <table>
 	<tbody>
 		<tr id="headerrow">
