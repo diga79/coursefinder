@@ -187,7 +187,7 @@ ul.list2 li {
     line-height: 18px;
     margin-top: -3px;
     padding-left: 33px;
-    background: <%= asset_path 'marker.png' %> 0 4px no-repeat;
+    background: url(../images/marker.png) 0 4px no-repeat;
     font-size: 16px;
 }
 
