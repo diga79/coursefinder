@@ -1,5 +1,6 @@
 class CitiesController < ApplicationController
-		before_filter :authenticate_user!
+	before_action :set_city, :only => [:show, :edit, :update, :destroy]
+	before_filter :authenticate_user!
 
 	def index
 		@cities = City.all.paginate(:page => params[:page])
@@ -12,7 +13,6 @@ class CitiesController < ApplicationController
 	end
 
 	def show
-		@city = City.find(params[:id])
 	end
 
 	def new
@@ -20,7 +20,7 @@ class CitiesController < ApplicationController
 	end
 
 	def create
-		@city = City.new(params[:city].permit(:name, :description))
+		@city = City.new(city_params)
 		if @city.save
 			flash[:notice] = "City Created"
 			redirect_to @city
@@ -30,12 +30,10 @@ class CitiesController < ApplicationController
 	end
 
 	def edit
-		@city = City.find(params[:id])
 	end
 
 	def update
-		@city = City.find(params[:id])
-		if @city.update(params[:city].permit(:name, :description))
+		if @city.update(city_params)
 			flash[:notice] = "City Updated"
 			redirect_to @city
 		else
@@ -44,8 +42,18 @@ class CitiesController < ApplicationController
 	end
 
 	def destroy
- 		City.find(params[:id]).destroy
+ 		@city.destroy
  		flash[:notice] = "City Deleted"
 		redirect_to cities_path
 	end	
+
+	private
+	def city_params
+ 		params.require(:city).permit(:name)
+	end	
+
+	def set_city
+		@city = City.find(params[:id])
+	end	
+
 end

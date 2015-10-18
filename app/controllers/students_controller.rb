@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+	before_action :set_student, :only => [:show, :edit, :update, :destroy]
 	before_filter :authenticate_user!
 
 	def index
@@ -15,7 +16,6 @@ class StudentsController < ApplicationController
 	end
 
 	def show
-		@student = Student.find(params[:id])
 	end
 
 	def new
@@ -23,11 +23,10 @@ class StudentsController < ApplicationController
 	end
 
 	def edit
-		@student = Student.find(params[:id])
 	end
 
 	def create
-		@student = Student.new(params[:student].permit(:first_name, :last_name, :email, :phone, :date_birth))
+		@student = Student.new(student_params)
 		if @student.save
 			flash[:notice] = "Student Created"
 			redirect_to @student
@@ -37,20 +36,27 @@ class StudentsController < ApplicationController
 	end
 
 	def update
-		@student = Student.find(params[:id])
-		if @student.update(params[:student].permit(:first_name, :last_name, :email, :phone, :date_birth))
+		if @student.update(student_params)
 			#Usermailer.Courseupdated_email(@course).deliver
 			flash[:notice] = "Student Updated"
 			redirect_to @student
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
- 		Student.find(params[:id]).destroy
+ 		@student.destroy
  		flash[:notice] = "Student Deleted"
 		redirect_to students_path
 	end
 
+	private
+	def student_params
+ 		params.require(:student).permit(:first_name, :last_name, :email, :phone, :date_birth)
+	end	
+
+	def set_student
+		@student = Student.find(params[:id])
+	end	
 end

@@ -1,5 +1,6 @@
 class CountriesController < ApplicationController
-		before_filter :authenticate_user!
+	before_action :set_country, :only => [:show, :edit, :update, :destroy]
+	before_filter :authenticate_user!
 
 	def index
 		@countries = Country.all.paginate(:page => params[:page])
@@ -11,7 +12,6 @@ class CountriesController < ApplicationController
 	end
 
 	def show
-		@country = Country.find(params[:id])
 	end
 
 	def new
@@ -19,7 +19,7 @@ class CountriesController < ApplicationController
 	end
 
 	def create
-		@country = Country.new(params[:country].permit(:name, :short_name))
+		@country = Country.new(country_params)
 		if @country.save
 			flash[:notice] = "City Created"
 			redirect_to @country
@@ -29,23 +29,29 @@ class CountriesController < ApplicationController
 	end
 
 	def edit
-		@country = Country.find(params[:id])
 	end
 
 	def update
-		@country = Country.find(params[:id])
-		if @country.update(params[:country].permit(:name, :short_name))
+		if @country.update(country_params)
 			flash[:notice] = "Country Updated"
 			redirect_to @country
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
- 		Country.find(params[:id]).destroy
+ 		@country.destroy
  		flash[:notice] = "Country Deleted"
 		redirect_to countries_path
 	end	
 
+	private
+	def country_params
+ 		params.require(:country).permit(:name, :short_name)
+	end	
+
+	def set_country
+		@country = Country.find(params[:id])
+	end	
 end

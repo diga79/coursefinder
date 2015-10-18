@@ -1,4 +1,5 @@
 class CourseOptionsController < ApplicationController
+	before_action :set_course_option, :only => [:show, :edit, :update, :destroy]
 	before_filter :authenticate_user!
 
 	def index
@@ -26,7 +27,6 @@ class CourseOptionsController < ApplicationController
 	end
 
 	def show
-		@course_option = CourseOption.find(params[:id])
 		@course_intakes = CourseIntake.where('course_option_id = ?',params[:id]).order('intake_date')
 	end	
 	
@@ -35,7 +35,7 @@ class CourseOptionsController < ApplicationController
 	end
 
 	def create
-		@course_option = CourseOption.new(params[:course_option].permit(:institution_id, :course_id, :cost, :material_fee, :more_information, :payments, :frequency_number, :frequency_type_id))
+		@course_option = CourseOption.new(course_option_params)
 		if @course_option.save
 			flash[:notice] = "Course Created"
 			redirect_to @course_option
@@ -45,24 +45,31 @@ class CourseOptionsController < ApplicationController
 	end
 
 	def edit
-		@course_option = CourseOption.find(params[:id])
 	end
 
 	def update
-		@course_option = CourseOption.find(params[:id])
-		if @course_option.update(params[:course_option].permit(:institution_id, :course_id, :cost, :material_fee, :more_information, :payments, :frequency_number, :frequency_type_id))
-			#Usermailer.Courseupdated_email(@course).deliver
+		if @course_option.update(course_option_params)
 			flash[:notice] = "Course Option Updated"
 			redirect_to @course_option
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
- 		CourseOption.find(params[:id]).destroy
+ 		@course_option.destroy
  		flash[:notice] = "Course Option Deleted"
 		redirect_to course_options_path
 	end
+
+	private
+	def course_option_params
+ 		params.require(:course_option).permit(:institution_id, :course_id, :cost, :material_fee, :more_information, :payments, :frequency_number, :frequency_type_id)
+	end	
+
+	def set_course_option
+		@course_option = CourseOption.find(params[:id])
+	end	
+
 
 end

@@ -1,4 +1,5 @@
 class FrequencyTypesController < ApplicationController
+	before_action :set_frequency_type, :only => [:show, :edit, :update, :destroy]
 	before_filter :authenticate_user!
 
 	def index
@@ -12,7 +13,6 @@ class FrequencyTypesController < ApplicationController
 	end
 
 	def show
-		@frequency_type = FrequencyType.find(params[:id])
 	end
 
 	def new
@@ -20,7 +20,7 @@ class FrequencyTypesController < ApplicationController
 	end
 
 	def create
-		@frequency_type = FrequencyType.new(params[:frequency_type].permit(:name))
+		@frequency_type = FrequencyType.new(frequency_type_params)
 		if @frequency_type.save
 			flash[:notice] = "Frequency Type Created"
 			redirect_to @frequency_type
@@ -30,23 +30,30 @@ class FrequencyTypesController < ApplicationController
 	end
 
 	def edit
-		@frequency_type = FrequencyType.find(params[:id])
 	end
 
 	def update
-		@frequency_type = FrequencyType.find(params[:id])
-		if @frequency_type.update(params[:frequency_type].permit(:name))
+		if @frequency_type.update(frequency_type_params)
 			flash[:notice] = "Frequency Type Updated"
 			redirect_to @frequency_type
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
- 		FrequencyType.find(params[:id]).destroy
+ 		@frequency_type.destroy
  		flash[:notice] = "Frequency Type Deleted"
 		redirect_to frequency_types_path
+	end	
+
+	private
+	def frequency_type_params
+ 		params.require(:frequency_type).permit(:name)
+	end	
+
+	def set_frequency_type
+		@frequency_type = FrequencyType.find(params[:id])
 	end	
 
 end

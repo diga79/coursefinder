@@ -13,7 +13,7 @@
 <%= form_for(@campu) do |f| %>
 	<div>
 		<%= f.label :institution_id %>
-		<%= f.collection_select(:institution_id, Institution.all, :id, :name, { selected: @insttitution.id }) %>
+		<%= f.collection_select(:institution_id, Institution.all, :id, :name, {selected: @institution.id }) %>
 	</div>
 	<div>
 		<%= f.label :city_id %>
@@ -21,7 +21,7 @@
 	</div>
 	<div>
 		  <%= label_tag(:country_id, "Country:") %>
-		  <%= select_tag(:country_id, options_for_select([['Australia', 1]]  )) %>
+		  <%= select_tag(:country_id, options_for_select( [['Australia', 1]]  )) %>
     </div>
 	<div>
 		<%= f.label :name %>

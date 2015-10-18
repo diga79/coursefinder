@@ -12,7 +12,7 @@
 
 <%= form_for(@course_intake) do |f| %>
 	<div>
-		<%= f.label :course_option_id %>
+		<%= f.label :course_option_id %>		
 		<%= f.collection_select(:course_option_id, CourseOption.joins(:course).where('course_options.id = ?',@course_option.id), :id, :course_name) %>
 	</div>
 	<div>

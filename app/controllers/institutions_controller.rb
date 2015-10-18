@@ -1,4 +1,5 @@
 class InstitutionsController < ApplicationController
+	before_action :set_institution, :only => [:show, :edit, :update, :destroy]
 	before_filter :authenticate_user!
 
 	def index
@@ -31,8 +32,6 @@ class InstitutionsController < ApplicationController
 	end
 
 	def show
-		#render nothing: true
-		@institution = Institution.find(params[:id])
 		@campus = Campu.where('institution_id = ?', @institution.id )
 	end
 
@@ -41,7 +40,7 @@ class InstitutionsController < ApplicationController
 	end
 
 	def create
-		@institution = Institution.new(params[:institution].permit(:name, :website, :enrolment_fee))
+		@institution = Institution.new(institution_params)
 		if @institution.save
 			flash[:notice] = "Institution Created"
 			redirect_to @institution
@@ -51,21 +50,19 @@ class InstitutionsController < ApplicationController
 	end
 
 	def edit
-		@institution = Institution.find(params[:id])
 	end
 
 	def update
-		@institution = Institution.find(params[:id])
-		if @institution.update(params[:institution].permit(:name, :website, :enrolment_fee))
+		if @institution.update(institution_params)
 			flash[:notice] = "Institution Updated"
 			redirect_to @institution
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
- 		Institution.find(params[:id]).destroy
+ 		@institution.destroy
  		flash[:notice] = "Institution Deleted"
 		redirect_to institutions_path
 	end
@@ -73,4 +70,14 @@ class InstitutionsController < ApplicationController
 	def only_admins_create_update_company
 		#redirect_to companies_path, :alert => "Only admins can create/update a company" unless current_user.admin
 	end	
+
+	private
+	def institution_params
+ 		params.require(:institution).permit(:name, :website, :enrolment_fee)
+	end	
+
+	def set_institution
+		@institution = Institution.find(params[:id])
+	end	
+
 end

@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+	before_action :set_course, :only => [:show, :edit, :update, :destroy]
 	before_filter :authenticate_user!
 
 	def index
@@ -11,8 +12,7 @@ class CoursesController < ApplicationController
 		end
 	end
 
-	def show
-		@course = Course.find(params[:id])
+	def show		
 	end
 
 	def new
@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
 	end
 
 	def create
-		@course = Course.new(params[:course].permit(:name, :description))
+		@course = Course.new(course_params)
 		if @course.save
 			flash[:notice] = "Course Created"
 			redirect_to @course
@@ -30,12 +30,10 @@ class CoursesController < ApplicationController
 	end
 
 	def edit
-		@course = Course.find(params[:id])
 	end
 
 	def update
-		@course = Course.find(params[:id])
-		if @course.update(params[:course].permit(:name, :description))
+		if @course.update(course_params)
 			#Usermailer.Courseupdated_email(@course).deliver
 			flash[:notice] = "Course Updated"
 			redirect_to @course
@@ -45,8 +43,17 @@ class CoursesController < ApplicationController
 	end
 
 	def destroy
- 		Course.find(params[:id]).destroy
+ 		@course.destroy
  		flash[:notice] = "Course Deleted"
 		redirect_to courses_path
+	end	
+
+	private
+	def course_params
+ 		params.require(:course).permit(:name, :description)
+	end	
+
+	def set_course
+		@course = Course.find(params[:id])
 	end	
 end

@@ -1,4 +1,7 @@
 class CampusController < ApplicationController
+	before_action :set_campu, :only => [:show, :edit, :update, :destroy]
+	before_action :set_institution, :only => [:edit, :update, :destroy]
+	before_filter :authenticate_user!
 
 	def index 
 		@campus = Campu.all.paginate(:page => params[:page])
@@ -6,21 +9,19 @@ class CampusController < ApplicationController
 			format.html #show.html.erb
 			format.xml { render xml: @campus }
 			format.json { render json: @campus }
-	end
-		
+		end
 	end
 
 	def show
-		@campu = Campu.find(params[:id])
 	end
 
 	def new
 		@campu = Campu.new
-		@insttitution = Institution.find(params[:institution_id])
+		@institution = Institution.find(params[:institution_id])
 	end
 
 	def create
-		@campu = Campu.new(params[:campu].permit(:institution_id,:city_id, :name, :address, :state, :country_id, :phone))
+		@campu = Campu.new(campu_params)
 		@institution = Institution.find(params[:campu][:institution_id])
 		if @campu.save
 			flash[:notice] = "Campus Created"
@@ -31,27 +32,34 @@ class CampusController < ApplicationController
 	end
 
 	def edit
-		@campu = Campu.find(params[:id])
-		@institution = Institution.find(@campu.institution.id)		
 	end
 
 	def update
-		@campu = Campu.find(params[:id])
-		@institution = Institution.find(@campu.institution_id)
-		if @campu.update(params[:campu].permit(:institution_id,:city_id, :name, :address, :state, :country_id, :phone))
+		if @campu.update(campu_params)
 			flash[:notice] = "Campus Updated"
 			redirect_to @institution
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
-		@campu = Campu.find(params[:id])
- 		Campu.find(params[:id]).destroy
- 		@institution = Institution.find(@campu.institution_id)			
+ 		@campu.destroy
  		flash[:notice] = "Campus Deleted"
 		redirect_to @institution
+	end	
+
+	private
+	def campu_params
+ 		params.require(:campu).permit(:institution_id,:city_id, :name, :address, :state, :country_id, :phone)
+	end	
+
+	def set_campu
+		@campu = Campu.find(params[:id])
+	end	
+
+	def set_institution
+		@institution = Institution.find(@campu.institution_id)
 	end	
 
 end

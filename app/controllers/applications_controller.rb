@@ -1,4 +1,5 @@
 class ApplicationsController < ApplicationController
+	before_action :set_application, :only => [:show, :edit, :update, :destroy]
 	before_filter :authenticate_user!
 
 	def index
@@ -30,7 +31,6 @@ class ApplicationsController < ApplicationController
 	end
 
 	def show
-		@application = Application.find(params[:id])
 		@total_cost = @application.course_option.cost + @application.course_option.institution.enrolment_fee + @application.course_option.material_fee
 	end
 
@@ -53,7 +53,7 @@ class ApplicationsController < ApplicationController
 	end
 
 	def create
-		@application = Application.new(params[:application].permit(:student_id, :course_option_id, :start_date, :payment_due_date, :payment_date, :total_paid))
+		@application = Application.new(application_params)
 		if @application.save
 			flash[:notice] = "Application Created"
 			redirect_to @application
@@ -63,24 +63,31 @@ class ApplicationsController < ApplicationController
 	end
 
 	def edit
-		@application = Application.find(params[:id])
 		@total_cost = @application.course_option.cost + @application.course_option.institution.enrolment_fee + @application.course_option.material_fee		
 	end
 
 	def update
-		@application = Application.find(params[:id])
-		if @application.update(params[:application].permit(:student_id, :course_option_id, :start_date, :payment_due_date, :payment_date, :total_paid))
-			#Usermailer.Courseupdated_email(@course).deliver
+		if @application.update(application_params)
 			flash[:notice] = "Application Updated"
 			redirect_to @application
 		else
-			render "new"
+			render "edit"
 		end
 	end
 
 	def destroy
- 		Application.find(params[:id]).destroy
+ 		@application.destroy
  		flash[:notice] = "Application Deleted"
 		redirect_to applications_path
 	end
+
+	private
+	def application_params
+ 		params.require(:application).permit(:student_id, :course_option_id, :start_date, :payment_due_date, :payment_date, :total_paid)
+	end	
+
+	def set_application
+		@application = Application.find(params[:id])
+	end	
+
 end

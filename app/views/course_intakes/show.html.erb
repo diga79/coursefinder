@@ -1,5 +1,5 @@
 <h1><%= @course_intake.intake_date_field %></h1>
 <p>
 	<%= link_to "Edit Intake", edit_course_intake_path(@course_intake) %> | 
-	<%= link_to "Delete", course_option_path(@course_intake), method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to "Delete", course_intake_path(@course_intake), method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>
