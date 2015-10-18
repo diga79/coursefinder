@@ -25,7 +25,7 @@
 		  <%= label_tag(:institution_id, "Institution:") %>
 		  <%= collection_select(:report, :institution_id, Institution.all, :id, :name, { selected: @institution_id, include_blank: true  })  %>
 
-		  <%= label_tag(:course_id, "Course1:") %>
+		  <%= label_tag(:course_id, "Course:") %>
 		  <%= collection_select(:report, :course_id, Course.all, :id, :name, { selected: @course_id, include_blank: true })  %>
 
 		  
