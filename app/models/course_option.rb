@@ -16,6 +16,9 @@ class CourseOption < ActiveRecord::Base
 	validates :course_id, presence: true
 	validates :frequency_type_id, presence: true
 
+	def to_s
+		"#{course.name} - #{institution.name}" 
+	end
 	def course_name
 		"#{course.name} - #{institution.name}" 
 	end

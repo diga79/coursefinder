@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
 				@text_search = "and (first_name like '%#{@search}%' or last_name like '%#{@search}%')"
 			end
 		end
-		@students = Student.where("1=1 #{@text_search}").paginate(:page => params[:page])
+		@students = Student.where("1=1 #{@text_search}")
 	end
 
 	def show

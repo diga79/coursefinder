@@ -18,7 +18,7 @@ class CourseOptionsController < ApplicationController
 				@text_institution = "and institution_id = #{@institution_id}"
 			end
 		end
-		@course_options = CourseOption.where("1=1 #{@text_course} #{@text_institution}").paginate(:page => params[:page])
+		@course_options = CourseOption.where("1=1 #{@text_course} #{@text_institution}")
 		respond_to do |format|
 			format.html #show.html.erb
 			format.xml { render xml: @course_options }

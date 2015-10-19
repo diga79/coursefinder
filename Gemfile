@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'devise'
-gem 'will_paginate'
 gem 'thin'
+gem 'kaminari'
+
+gem 'activeadmin', '1.0.0.pre1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-# Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -41,6 +43,7 @@ group :development, :test do
 end
 
 group :development do
+  # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -51,10 +54,10 @@ group :development do
 end
 
 group :test do
+  # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
 
 group :production do
 	gem 'pg'
 end
-

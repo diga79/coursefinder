@@ -20,9 +20,9 @@ class InstitutionsController < ApplicationController
 		end
 
 		if @course_id == 0
-			@institutions = Institution.where("1=1 #{@text_search}").paginate(:page => params[:page])
+			@institutions = Institution.where("1=1 #{@text_search}")
 		else
-			@institutions = Institution.joins(:course_options).where("1=1 #{@text_search} #{@text_course}").paginate(:page => params[:page])			
+			@institutions = Institution.joins(:course_options).where("1=1 #{@text_search} #{@text_course}")		
 		end
 		respond_to do |format|
 			format.html #show.html.erb

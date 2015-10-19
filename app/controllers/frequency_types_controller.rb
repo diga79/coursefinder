@@ -3,7 +3,7 @@ class FrequencyTypesController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@frequency_types = FrequencyType.all.paginate(:page => params[:page])
+		@frequency_types = FrequencyType.all
 		respond_to do |format|
 			format.html #show.html.erb
 			format.xml { render xml: @frequency_types }

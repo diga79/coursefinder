@@ -21,7 +21,7 @@ class ApplicationsController < ApplicationController
 				@text_institution = "and institution_id = #{@institution_id}"
 			end
 		end
-		@applications = Application.joins(:course_option, :student).where("1=1 #{ @text_institution } #{ @text_course } #{ @text_search }") .paginate(:page => params[:page])
+		@applications = Application.joins(:course_option, :student).where("1=1 #{ @text_institution } #{ @text_course } #{ @text_search }")
 		respond_to do |format|
 			format.html #show.html.erb
 			format.xml { render xml: @applications }

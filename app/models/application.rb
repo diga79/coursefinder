@@ -7,6 +7,10 @@ class Application < ActiveRecord::Base
     validates :student_id, presence: true	
 	validates :total_paid, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+	def to_s
+		"#{student.first_name} #{student.last_name} - #{course_option.course.name}" 
+	end
+
 	def start_date_field
 		start_date.strftime('%d/%m/%Y')
 	end    

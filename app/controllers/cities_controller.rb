@@ -3,7 +3,7 @@ class CitiesController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@cities = City.all.paginate(:page => params[:page])
+		@cities = City.all
 		respond_to do |format|
 			format.html #show.html.erb
 			format.xml { render xml: @cities }

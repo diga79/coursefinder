@@ -3,7 +3,7 @@ class CountriesController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@countries = Country.all.paginate(:page => params[:page])
+		@countries = Country.all
 		respond_to do |format|
 			format.html #show.html.erb
 			format.xml { render xml: @countries }
