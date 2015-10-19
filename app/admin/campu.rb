@@ -1,6 +1,6 @@
 ActiveAdmin.register Campu do
 
-  permit_params :institution_id,:city_id, :name, :address, :state, :country_id, :phone
+  permit_params :institution_id,:city_id, :name, :address, :state, :country_id, :phone, :postal
   
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
